@@ -43,6 +43,7 @@ export function Typography({ system }: { system: DesignSystem }) {
               style={{
                 fontSize: `${Math.min(t.size, 64)}px`,
                 fontWeight: t.weight,
+                fontFamily: t.family,
                 letterSpacing: `${t.tracking}px`,
                 lineHeight: `${t.lineHeight}px`,
               }}
@@ -71,6 +72,7 @@ export function Typography({ system }: { system: DesignSystem }) {
               style={{
                 fontSize: `${t.size}px`,
                 fontWeight: t.weight,
+                fontFamily: t.family,
                 letterSpacing: `${t.tracking}px`,
                 lineHeight: `${t.lineHeight}px`,
               }}

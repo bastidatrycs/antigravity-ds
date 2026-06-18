@@ -21,6 +21,9 @@ export default async function SystemPage({ params }: { params: Promise<{ system:
 
   return (
     <div className="min-h-screen bg-white">
+      {system.fontFaces && (
+        <style dangerouslySetInnerHTML={{ __html: system.fontFaces }} />
+      )}
       {/* Top nav */}
       <header className="sticky top-0 z-10 border-b border-neutral-200 bg-white/90 backdrop-blur-sm">
         <div className="max-w-[1320px] mx-auto px-8 py-3 flex items-center gap-4">

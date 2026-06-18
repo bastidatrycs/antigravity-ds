@@ -7,6 +7,39 @@ export const fchHansaRostockSystem: DesignSystem = {
   source: 'https://www.fch.de/',
   extractedAt: '2026-06-18',
 
+  fontFaces: `
+    @font-face {
+      font-family: 'Factoria-Bold';
+      src: url('/fonts/fch/Factoria-Bold.woff2') format('woff2'),
+           url('/fonts/fch/Factoria-Bold.woff') format('woff');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'noway-regular-webfont';
+      src: url('/fonts/fch/noway-regular-webfont.woff2') format('woff2'),
+           url('/fonts/fch/noway-regular-webfont.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'noway-regular-webfont';
+      src: url('/fonts/fch/noway-medium-webfont.woff2') format('woff2');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'noway-regular-webfont';
+      src: url('/fonts/fch/noway-light-webfont.woff2') format('woff2');
+      font-weight: 300;
+      font-style: normal;
+      font-display: swap;
+    }
+  `,
+
   colorGroups: ['Brand', 'Surface', 'Border', 'Text', 'Semantic'],
 
   colors: [
