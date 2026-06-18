@@ -1,0 +1,224 @@
+import { DesignSystem } from '@/lib/types'
+
+export const fchHansaRostockSystem: DesignSystem = {
+  id: 'fch-hansa-rostock',
+  name: 'F.C. Hansa Rostock',
+  description: 'FCH-Blau als dominante Markenfarbe, Factoria-Bold in Großbuchstaben und Pinsel-Textur-Buttons — stark, norddeutsch, unsinkbar seit 1965.',
+  source: 'https://www.fch.de/',
+  extractedAt: '2026-06-18',
+
+  colorGroups: ['Brand', 'Surface', 'Border', 'Text', 'Semantic'],
+
+  colors: [
+    // Brand
+    { token: 'brand-primary',   display: 'primary',   hex: '#0080C9', role: 'FCH-Blau · Header · H1/H2 · primäre CTAs',    group: 'Brand' },
+    { token: 'brand-navy',      display: 'navy',      hex: '#143A77', role: 'Dunkles Navy · Gradient-Akzent',               group: 'Brand' },
+    { token: 'brand-red',       display: 'red',       hex: '#9E0101', role: 'Vereinsrot · Roter Button-Variant',            group: 'Brand' },
+    // Surface
+    { token: 'surface-default', display: 'default',   hex: '#FFFFFF', role: 'Seiten-Hintergrund',                           group: 'Surface' },
+    { token: 'surface-raised',  display: 'raised',    hex: '#FFFFFF', role: 'Leicht erhobene Fläche',                       group: 'Surface' },
+    { token: 'surface-card',    display: 'card',      hex: '#EFEFEF', role: 'Card · Teaser-Hintergrund',                    group: 'Surface' },
+    { token: 'surface-overlay', display: 'overlay',   hex: '#000000', role: 'Modal · Mobile-Overlay 85%',                   group: 'Surface' },
+    // Border
+    { token: 'border-default',  display: 'default',   hex: '#DDDDDD', role: 'Standard-Trennlinien · Rahmen',                group: 'Border' },
+    { token: 'border-subtle',   display: 'subtle',    hex: '#EFEFEF', role: 'Subtile Rahmen',                               group: 'Border' },
+    // Text
+    { token: 'text-primary',    display: 'primary',   hex: '#333333', role: 'Body-Text',                                    group: 'Text' },
+    { token: 'text-secondary',  display: 'secondary', hex: '#8D8D8D', role: 'Gedämpft · Hilfstext · Metadaten',             group: 'Text' },
+    { token: 'text-muted',      display: 'muted',     hex: '#8D8D8D', role: 'De-emphasized · Zeitstempel',                  group: 'Text' },
+    { token: 'text-inverse',    display: 'inverse',   hex: '#FFFFFF', role: 'Text auf Blau / dunklern Flächen',             group: 'Text' },
+    { token: 'text-link',       display: 'link',      hex: '#0080C9', role: 'Interaktive Links',                            group: 'Text' },
+    // Semantic
+    { token: 'semantic-success', display: 'success',  hex: '#2D7A2D', role: 'Positive Zustände',                            group: 'Semantic' },
+    { token: 'semantic-error',   display: 'error',    hex: '#9E0101', role: 'Fehler · destruktive Aktionen',                group: 'Semantic' },
+    { token: 'semantic-warning', display: 'warning',  hex: '#E07800', role: 'Warnzustände',                                 group: 'Semantic' },
+  ],
+
+  typography: [
+    { token: 'display-xl',   family: 'Factoria-Bold', size: 87, weight: 400, lineHeight: 87,  tracking: 0,    usage: 'Hero-Score, übergroße Zahlen',          section: 'display' },
+    { token: 'display-lg',   family: 'Factoria-Bold', size: 60, weight: 400, lineHeight: 72,  tracking: 0,    usage: 'H1 Hero-Headline (UPPERCASE)',           section: 'display' },
+    { token: 'display-md',   family: 'Factoria-Bold', size: 50, weight: 400, lineHeight: 60,  tracking: 0,    usage: 'H2 Sektions-Titel (UPPERCASE)',          section: 'display' },
+    { token: 'display-sm',   family: 'Factoria-Bold', size: 38, weight: 400, lineHeight: 46,  tracking: 0,    usage: 'H3 Display · Sub-Sektions-Kopf',        section: 'display' },
+    { token: 'title-lg',     family: 'Factoria-Bold', size: 30, weight: 400, lineHeight: 36,  tracking: 0,    usage: 'Große Karten-Titel',                    section: 'display' },
+    { token: 'title-md',     family: 'Factoria-Bold', size: 26, weight: 400, lineHeight: 32,  tracking: 0,    usage: 'Karten-Überschriften (H3)',              section: 'display' },
+    { token: 'title-sm',     family: 'Arial',         size: 20, weight: 700, lineHeight: 28,  tracking: 0,    usage: 'Membership-Titel · kleine Sektionsköpfe', section: 'body' },
+    { token: 'body-lg',      family: 'noway-regular-webfont', size: 20, weight: 400, lineHeight: 28, tracking: 0, usage: 'Nav-Links · Button-Labels (UPPERCASE)', section: 'body' },
+    { token: 'body-md',      family: 'noway-regular-webfont', size: 16, weight: 400, lineHeight: 24, tracking: 0, usage: 'Standard-Fließtext',                section: 'body' },
+    { token: 'label-md',     family: 'noway-regular-webfont', size: 14, weight: 400, lineHeight: 20, tracking: 0, usage: 'Sekundärer Text · Bildunterschriften', section: 'body' },
+    { token: 'caption',      family: 'noway-regular-webfont', size: 13, weight: 400, lineHeight: 18, tracking: 0, usage: 'Metadaten · Zeitstempel',            section: 'body' },
+  ],
+
+  spacing: [
+    { token: 'spacing-xxs',     value: 4,   usage: 'Inline-Abstände, Icon-Margins' },
+    { token: 'spacing-xs',      value: 8,   usage: 'Grid-Gutter, enge Padding (Bootstrap: 8px)' },
+    { token: 'spacing-sm',      value: 16,  usage: 'Standard-Eingabe-Padding' },
+    { token: 'spacing-md',      value: 24,  usage: 'Card-internes Padding' },
+    { token: 'spacing-lg',      value: 32,  usage: 'Komponenten-Gruppenabstände' },
+    { token: 'spacing-xl',      value: 48,  usage: 'Sektions-internes Padding' },
+    { token: 'spacing-xxl',     value: 64,  usage: 'Sektions-Abstände' },
+    { token: 'spacing-section', value: 96,  usage: 'Große Editorial-Band-Abstände' },
+  ],
+
+  radius: [
+    { token: 'radius-none',   value: 0,    usage: 'Buttons, harte Kanten — dominantes Muster' },
+    { token: 'radius-xs',     value: 2,    usage: 'Minimale Abrundung' },
+    { token: 'radius-sm',     value: 4,    usage: 'Standard-Tags, kleine Inputs' },
+    { token: 'radius-md',     value: 20,   usage: 'Cards, Teaser-Boxen, Panels' },
+    { token: 'radius-lg',     value: 20,   usage: 'Große Panels' },
+    { token: 'radius-full',   value: 9999, usage: 'Pills, Badge-Elemente' },
+  ],
+
+  componentGroups: ['Buttons', 'Navigation', 'Badges & Labels', 'Cards', 'Form Controls'],
+
+  components: [
+    {
+      name: 'button-primary-blue',
+      group: 'Buttons',
+      description: 'Primärer CTA — FCH-Blau, Pinsel-SVG-Textur, Factoria-Bold UPPERCASE',
+      type: 'button',
+      height: 64, paddingX: 80, radiusValue: 0,
+      fontSize: 20, fontWeight: 400,
+      defaultContent: 'Jetzt entdecken',
+      variants: [
+        { label: 'Default',  bg: '#0080C9', textColor: '#FFFFFF' },
+        { label: 'Hover',    bg: '#0070B0', textColor: '#FFFFFF' },
+        { label: 'Disabled', bg: '#DDDDDD', textColor: '#8D8D8D', opacity: 0.4 },
+      ],
+    },
+    {
+      name: 'button-primary-red',
+      group: 'Buttons',
+      description: 'Roter CTA — Spieltag- und Ergebnis-Kontext',
+      type: 'button',
+      height: 64, paddingX: 80, radiusValue: 0,
+      fontSize: 20, fontWeight: 400,
+      defaultContent: 'Tabelle ansehen',
+      variants: [
+        { label: 'Default',  bg: '#9E0101', textColor: '#FFFFFF' },
+        { label: 'Hover',    bg: '#7D0101', textColor: '#FFFFFF' },
+        { label: 'Disabled', bg: '#DDDDDD', textColor: '#8D8D8D', opacity: 0.4 },
+      ],
+    },
+    {
+      name: 'button-secondary-white',
+      group: 'Buttons',
+      description: 'Ghost-Button auf blauem Hintergrund — weißer Pinsel-Hintergrund',
+      type: 'button',
+      height: 64, paddingX: 80, radiusValue: 0,
+      fontSize: 20, fontWeight: 400,
+      defaultContent: 'Infos zum Spiel',
+      variants: [
+        { label: 'Default',  bg: '#FFFFFF', textColor: '#0080C9' },
+        { label: 'Hover',    bg: '#F0F0F0', textColor: '#0080C9' },
+        { label: 'Disabled', bg: '#DDDDDD', textColor: '#8D8D8D', opacity: 0.4 },
+      ],
+    },
+    {
+      name: 'nav-item',
+      group: 'Navigation',
+      description: 'Haupt-Navigationslink in der blauen Header-Bar — Factoria-Bold UPPERCASE',
+      type: 'button',
+      height: 56, paddingX: 16, radiusValue: 0,
+      fontSize: 20, fontWeight: 400,
+      defaultContent: 'News',
+      variants: [
+        { label: 'Default', bg: 'transparent',       textColor: '#FFFFFF' },
+        { label: 'Hover',   bg: 'rgba(0,0,0,0.15)', textColor: '#FFFFFF' },
+        { label: 'Active',  bg: '#143A77',            textColor: '#FFFFFF' },
+      ],
+    },
+    {
+      name: 'badge-spielstatus',
+      group: 'Badges & Labels',
+      description: 'Statuskennzeichnung für Spieltage und Ergebnisse',
+      type: 'badge-set',
+      height: 24, paddingX: 8, radiusValue: 4,
+      fontSize: 11, fontWeight: 700,
+      defaultContent: 'Live',
+      variants: [
+        { label: 'Live',          bg: '#9E0101', textColor: '#FFFFFF', content: 'Live' },
+        { label: 'Anstehend',     bg: '#0080C9', textColor: '#FFFFFF', content: 'Anstehend' },
+        { label: 'Abgeschlossen', bg: '#8D8D8D', textColor: '#FFFFFF', content: 'Abgeschlossen' },
+      ],
+    },
+    {
+      name: 'news-teaser-card',
+      group: 'Cards',
+      description: 'News-Artikel-Teaser mit Bild, Überschrift und kurzem Text',
+      type: 'card',
+      height: 0, paddingX: 24, radiusValue: 0,
+      fontSize: 16, fontWeight: 400,
+      defaultContent: 'Meldung lesen',
+      variants: [
+        { label: 'Default', bg: '#FFFFFF', textColor: '#333333', border: '1px solid #DDDDDD' },
+        { label: 'Hover',   bg: '#EFEFEF', textColor: '#333333', border: '1px solid #DDDDDD' },
+      ],
+      cardContent: { heading: 'Meldung-Titel des Artikels', body: 'Kurze Beschreibung der News-Meldung in zwei bis drei Zeilen Fließtext.' },
+    },
+    {
+      name: 'match-ticker',
+      group: 'Cards',
+      description: 'Spieltag-Karte mit Vereinswappen, Ergebnis und Datum — FCH-Blau-Hintergrund',
+      type: 'card',
+      height: 160, paddingX: 32, radiusValue: 0,
+      fontSize: 52, fontWeight: 400,
+      defaultContent: '2 : 1',
+      variants: [
+        { label: 'Heimspiel',  bg: '#0080C9', textColor: '#FFFFFF' },
+        { label: 'Auswärtsspiel', bg: '#143A77', textColor: '#FFFFFF' },
+      ],
+      cardContent: { heading: '2 : 1', body: 'Hansa Rostock · Heimspiel' },
+    },
+    {
+      name: 'membership-card',
+      group: 'Cards',
+      description: 'Mitgliedschafts-Kategorie-Box mit Titel und CTA',
+      type: 'card',
+      height: 0, paddingX: 24, radiusValue: 20,
+      fontSize: 16, fontWeight: 400,
+      defaultContent: 'Jetzt Mitglied werden',
+      variants: [
+        { label: 'Default',     bg: '#FFFFFF', textColor: '#333333', border: '1px solid #DDDDDD' },
+        { label: 'Highlighted', bg: '#0080C9', textColor: '#FFFFFF' },
+      ],
+      cardContent: { heading: 'Mitgliedschaft Erwachsene', body: 'Ab 25 Jahre · Alle Vereinsvorteile' },
+    },
+    {
+      name: 'search-input',
+      group: 'Form Controls',
+      description: 'Suchfeld mit Submit-Button',
+      type: 'input',
+      height: 48, paddingX: 16, radiusValue: 0,
+      fontSize: 16, fontWeight: 400,
+      defaultContent: 'Suche...',
+      variants: [
+        { label: 'Default', bg: '#FFFFFF', textColor: '#333333', border: '1px solid #DDDDDD' },
+        { label: 'Focused', bg: '#FFFFFF', textColor: '#333333', border: '1px solid #0080C9', ringColor: '#0080C9' },
+      ],
+    },
+  ],
+
+  principles: {
+    do: [
+      'FCH-Blau (#0080C9) für Überschriften, Header-Hintergrund und primäre CTAs verwenden',
+      'Factoria-Bold für alle Display-Elemente und CTAs in UPPERCASE setzen',
+      'Kantige Formen einhalten — radius-none dominiert das gesamte UI',
+      'Blau und Navy für Tiefe in Headern und Hero-Bereichen kombinieren',
+      'noway-regular-webfont für alle Fließtexte und Beschreibungen nutzen',
+    ],
+    dont: [
+      'Keine weichen, gerundeten CTAs — Hansa ist kantig, nicht freundlich-rund',
+      'Factoria-Bold nicht in Kleinschreibung verwenden',
+      'Keine pastelligen oder gesättigten Fremdfarben einsetzen',
+      'Body-Copy nicht in Factoria-Bold setzen — noway ist der Fließtext-Font',
+      'Niemals mehr als 3 Schriftgrößen in einem einzelnen Sektionsblock mischen',
+    ],
+  },
+
+  breakpoints: [
+    { name: 'Mobile',  width: '< 768px',    changes: 'Hamburger-Menü, gestapelte Cards, Buttons full-width' },
+    { name: 'Tablet',  width: '768–992px',  changes: '2-Spalten-Layout, reduzierte Heading-Größen' },
+    { name: 'Desktop', width: '992–1200px', changes: 'Standard 12-Spalten Bootstrap-Grid' },
+    { name: 'Wide',    width: '> 1200px',   changes: 'Max-Width Container, großzügige Section-Abstände' },
+  ],
+}
