@@ -29,14 +29,29 @@ export interface RadiusToken {
   usage: string
 }
 
+export interface ComponentVariant {
+  label: string
+  bg: string
+  textColor: string
+  border?: string
+  opacity?: number
+  ringColor?: string
+  content?: string
+}
+
 export interface ComponentSpec {
   name: string
-  element: string
-  dimensions: string
-  colors: string
-  typography: string
-  radius: string
-  notes: string
+  group: string
+  description: string
+  type: 'button' | 'badge-set' | 'card' | 'input'
+  height: number
+  paddingX: number
+  radiusValue: number
+  fontSize: number
+  fontWeight: number
+  defaultContent: string
+  variants: ComponentVariant[]
+  cardContent?: { heading: string; body: string }
 }
 
 export interface DesignSystem {
@@ -51,6 +66,7 @@ export interface DesignSystem {
   typography: TypographyToken[]
   spacing: SpacingToken[]
   radius: RadiusToken[]
+  componentGroups: string[]
   components: ComponentSpec[]
   principles: {
     do: string[]
