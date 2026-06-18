@@ -4,9 +4,9 @@ export function Components({ system }: { system: DesignSystem }) {
   return (
     <section id="components" className="space-y-6">
       <div className="flex items-center gap-3">
-        <h2 className="text-[10px] font-semibold tracking-[0.12em] uppercase text-neutral-400">Components</h2>
+        <h2 className="text-xs font-semibold tracking-[0.12em] uppercase text-neutral-400">Components</h2>
         <div className="flex-1 h-px bg-neutral-100" />
-        <span className="text-[10px] text-neutral-400">{system.components.length} components</span>
+        <span className="text-xs text-neutral-400">{system.components.length} components</span>
       </div>
 
       <div className="grid grid-cols-3 gap-4">

@@ -23,7 +23,7 @@ export default async function SystemPage({ params }: { params: Promise<{ system:
     <div className="min-h-screen bg-white">
       {/* Top nav */}
       <header className="sticky top-0 z-10 border-b border-neutral-200 bg-white/90 backdrop-blur-sm">
-        <div className="max-w-5xl mx-auto px-8 py-3 flex items-center gap-4">
+        <div className="max-w-[1320px] mx-auto px-8 py-3 flex items-center gap-4">
           <Link href="/" className="flex items-center gap-2 text-neutral-400 hover:text-neutral-700 transition-colors">
             <div className="w-5 h-5 rounded bg-neutral-900 flex items-center justify-center">
               <span className="text-white text-[9px] font-bold">AG</span>
@@ -63,7 +63,7 @@ export default async function SystemPage({ params }: { params: Promise<{ system:
         </div>
       </header>
 
-      <main className="max-w-5xl mx-auto px-8 py-10 space-y-14">
+      <main className="max-w-[1320px] mx-auto px-8 py-10 space-y-14">
         {/* System header */}
         <div className="flex items-start justify-between gap-8">
           <div className="space-y-2">
