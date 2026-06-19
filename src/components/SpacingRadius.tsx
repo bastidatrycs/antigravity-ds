@@ -37,7 +37,7 @@ export function SpacingRadius({ system }: { system: DesignSystem }) {
                     opacity: 0.35,
                   }}
                 />
-                <span className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity">
+                <span className="ml-auto opacity-100">
                   <CopyButton value={`var(--${s.token})`} label={`--${s.token.replace('spacing-', '')}`} />
                 </span>
               </div>
@@ -65,7 +65,7 @@ export function SpacingRadius({ system }: { system: DesignSystem }) {
                     {r.usage ? ` · ${r.usage}` : ''}
                   </div>
                 </div>
-                <span className="opacity-0 group-hover:opacity-100 transition-opacity">
+                <span className="opacity-100">
                   <CopyButton value={`var(--${r.token})`} label={`--${r.token.replace('radius-', '')}`} />
                 </span>
               </div>
