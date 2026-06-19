@@ -104,20 +104,21 @@ export const fchHansaRostockSystem: DesignSystem = {
   componentGroups: ['Buttons', 'Navigation', 'Badges & Labels', 'Cards', 'Form Controls'],
 
   components: [
-    // ── Members-Page Buttons (Figma node 1569:1146) ──────────────────────────
-    // 48px · Factoria Bold · radius-none — vollständiges Button-System
+    // ── Buttons (Figma Members Page node 1569:1146) ──────────────────────────
+    // Factoria-Bold · radius-none · vollständiges System
     {
       name: 'button-primary',
       group: 'Buttons',
-      description: 'Primärer CTA — FCH-Blau, 48px, Factoria Bold 16px (Figma Members Page)',
+      description: 'Primärer CTA — FCH-Blau, 48px, Factoria Bold 16px',
       type: 'button',
-      height: 48, paddingX: 14, radiusValue: 0,
+      height: 48, paddingX: 24, radiusValue: 0,
       fontSize: 16, fontWeight: 700,
+      fontFamily: 'Factoria-Bold',
       defaultContent: 'Jetzt Mitglied werden',
       variants: [
         { label: 'Default',  bg: '#0080C9', textColor: '#FFFFFF' },
         { label: 'Hover',    bg: '#006FA2', textColor: '#FFFFFF' },
-        { label: 'Disabled', bg: '#DDDDDD', textColor: '#8D8D8D', opacity: 0.4 },
+        { label: 'Disabled', bg: '#CCCCCC', textColor: '#999999', opacity: 0.6 },
       ],
     },
     {
@@ -125,26 +126,28 @@ export const fchHansaRostockSystem: DesignSystem = {
       group: 'Buttons',
       description: 'Sekundärer CTA — Weiß mit FCH-Blau Rahmen, 48px, Factoria Bold 14px',
       type: 'button',
-      height: 48, paddingX: 12, radiusValue: 0,
+      height: 48, paddingX: 24, radiusValue: 0,
       fontSize: 14, fontWeight: 700,
+      fontFamily: 'Factoria-Bold',
       defaultContent: 'Mehr erfahren',
       variants: [
         { label: 'Default',  bg: '#FFFFFF', textColor: '#0080C9', border: '2px solid #0080C9' },
         { label: 'Hover',    bg: '#FFFFFF', textColor: '#006FA2', border: '2px solid #006FA2' },
-        { label: 'Disabled', bg: '#FFFFFF', textColor: '#8D8D8D', border: '2px solid #DDDDDD', opacity: 0.4 },
+        { label: 'Disabled', bg: '#FFFFFF', textColor: '#CCCCCC', border: '2px solid #CCCCCC', opacity: 0.6 },
       ],
     },
     {
       name: 'button-link',
       group: 'Buttons',
-      description: 'Link-Button — FCH-Blau Unterstreichen-Rahmen, Factoria Bold 15px, kein Hintergrund',
+      description: 'Link-CTA — FCH-Blau, Factoria Bold 15px, nur Unterstrich-Rahmen',
       type: 'button',
       height: 23, paddingX: 0, radiusValue: 0,
       fontSize: 15, fontWeight: 700,
+      fontFamily: 'Factoria-Bold',
       defaultContent: 'Details ansehen',
       variants: [
-        { label: 'Default',  bg: 'transparent', textColor: '#0080C9', border: '0 0 2px 0 solid #0080C9' },
-        { label: 'Hover',    bg: 'transparent', textColor: '#006FA2', border: '0 0 2px 0 solid #006FA2' },
+        { label: 'Default', bg: 'transparent', textColor: '#0080C9', borderBottom: '2px solid #0080C9' },
+        { label: 'Hover',   bg: 'transparent', textColor: '#006FA2', borderBottom: '2px solid #006FA2' },
       ],
     },
     {
@@ -154,55 +157,12 @@ export const fchHansaRostockSystem: DesignSystem = {
       type: 'button',
       height: 46, paddingX: 0, radiusValue: 0,
       fontSize: 0, fontWeight: 700,
+      fontFamily: 'Factoria-Bold',
       defaultContent: '→',
       variants: [
         { label: 'Default',  bg: '#0080C9', textColor: '#FFFFFF' },
         { label: 'Hover',    bg: '#006FA2', textColor: '#FFFFFF' },
-        { label: 'Disabled', bg: '#DDDDDD', textColor: '#8D8D8D', opacity: 0.4 },
-      ],
-    },
-    // ── Hero-Button (fch.de Startseite, Pinsel-Textur-SVG) ──────────────────
-    // Größer, Uppercase. Nur auf der Vereinswebsite, nicht im Shopware-Shop.
-    {
-      name: 'button-hero-blue',
-      group: 'Buttons',
-      description: 'Hero-CTA (fch.de) — FCH-Blau, Pinsel-SVG-Textur, Factoria-Bold UPPERCASE',
-      type: 'button',
-      height: 64, paddingX: 80, radiusValue: 0,
-      fontSize: 20, fontWeight: 700,
-      defaultContent: 'Jetzt entdecken',
-      variants: [
-        { label: 'Default',  bg: '#0080C9', textColor: '#FFFFFF' },
-        { label: 'Hover',    bg: '#0070B0', textColor: '#FFFFFF' },
-        { label: 'Disabled', bg: '#DDDDDD', textColor: '#8D8D8D', opacity: 0.4 },
-      ],
-    },
-    {
-      name: 'button-hero-red',
-      group: 'Buttons',
-      description: 'Hero-CTA (fch.de) — Vereinsrot, Pinsel-SVG-Textur, Factoria-Bold UPPERCASE',
-      type: 'button',
-      height: 64, paddingX: 80, radiusValue: 0,
-      fontSize: 20, fontWeight: 700,
-      defaultContent: 'Tabelle ansehen',
-      variants: [
-        { label: 'Default',  bg: '#9E0101', textColor: '#FFFFFF' },
-        { label: 'Hover',    bg: '#7D0101', textColor: '#FFFFFF' },
-        { label: 'Disabled', bg: '#DDDDDD', textColor: '#8D8D8D', opacity: 0.4 },
-      ],
-    },
-    {
-      name: 'button-hero-white',
-      group: 'Buttons',
-      description: 'Hero-Ghost-CTA (fch.de) — Weißer Pinsel, Blauer Text, Factoria-Bold UPPERCASE',
-      type: 'button',
-      height: 64, paddingX: 80, radiusValue: 0,
-      fontSize: 20, fontWeight: 700,
-      defaultContent: 'Infos zum Spiel',
-      variants: [
-        { label: 'Default',  bg: '#FFFFFF', textColor: '#0080C9' },
-        { label: 'Hover',    bg: '#F0F0F0', textColor: '#0080C9' },
-        { label: 'Disabled', bg: '#DDDDDD', textColor: '#8D8D8D', opacity: 0.4 },
+        { label: 'Disabled', bg: '#CCCCCC', textColor: '#999999', opacity: 0.6 },
       ],
     },
     {
@@ -212,6 +172,7 @@ export const fchHansaRostockSystem: DesignSystem = {
       type: 'button',
       height: 56, paddingX: 16, radiusValue: 0,
       fontSize: 20, fontWeight: 700,
+      fontFamily: 'Factoria-Bold',
       defaultContent: 'News',
       variants: [
         { label: 'Default', bg: 'transparent',       textColor: '#FFFFFF' },

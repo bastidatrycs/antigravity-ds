@@ -34,6 +34,7 @@ export interface ComponentVariant {
   bg: string
   textColor: string
   border?: string
+  borderBottom?: string
   opacity?: number
   ringColor?: string
   content?: string
@@ -49,6 +50,7 @@ export interface ComponentSpec {
   radiusValue: number
   fontSize: number
   fontWeight: number
+  fontFamily?: string
   defaultContent: string
   variants: ComponentVariant[]
   cardContent?: { heading: string; body: string }
