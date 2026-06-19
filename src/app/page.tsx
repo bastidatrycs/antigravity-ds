@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="flex min-h-screen">
       {/* Sidebar */}
-      <aside className="w-[52px] shrink-0 bg-white border-r border-neutral-100 flex flex-col items-center pt-4">
+      <aside className="w-[52px] shrink-0 bg-white border-r flex flex-col items-center pt-4" style={{ borderColor: '#D4D4D4' }}>
         <Link href="/">
           <Image src="/logos/datrycs-picto.svg" alt="Datrycs" width={24} height={29} />
         </Link>

@@ -33,11 +33,11 @@ export function SystemSidebar() {
   }, [])
 
   return (
-    <aside className="w-[233px] shrink-0 bg-white border-r border-neutral-100 flex flex-col sticky top-0 h-screen overflow-y-auto">
+    <aside className="w-[233px] shrink-0 bg-white border-r flex flex-col sticky top-0 h-screen overflow-y-auto" style={{ borderColor: '#D4D4D4' }}>
       {/* Logo */}
       <div className="px-6 pt-5 pb-4">
         <Link href="/">
-          <Image src="/logos/datrycs-picto.svg" alt="Datrycs" width={22} height={27} />
+          <Image src="/logos/datrycs-ds-logo.svg" alt="Datrycs DS" width={120} height={25} />
         </Link>
       </div>
 
