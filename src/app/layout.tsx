@@ -5,7 +5,7 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
 export const metadata: Metadata = {
-  title: 'ANtigravity Design Systems',
+  title: 'Design System Library — by Datrycs',
   description: 'Design token browser and export tool for extracted design systems — by Datrycs',
 }
 

@@ -6,6 +6,7 @@ export const fchHansaRostockSystem: DesignSystem = {
   description: 'FCH-Blau als dominante Markenfarbe, Factoria-Bold in Großbuchstaben und Pinsel-Textur-Buttons — stark, norddeutsch, unsinkbar seit 1965.',
   source: 'https://www.fch.de/',
   logo: '/logos/hansa.svg',
+  coverImage: '/logos/hansa-cover.jpg',
   extractedAt: '2026-06-18',
 
   fontFaces: `
