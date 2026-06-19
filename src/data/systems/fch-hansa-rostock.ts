@@ -116,13 +116,11 @@ export const fchHansaRostockSystem: DesignSystem = {
     { token: 'radius-full',   value: 9999, usage: 'Pills, Badge-Elemente' },
   ],
 
-  componentGroups: ['Buttons', 'Navigation', 'Badges & Labels', 'Cards', 'Form Controls'],
+  componentGroups: ['Buttons', 'Badges & Labels', 'Form Controls'],
 
   componentGroupDescriptions: {
     'Buttons': 'Das FCH-Button-System folgt einem kantigen Designprinzip — radius-none auf allen CTAs, Factoria-Bold als Schrift, FCH-Blau als primäre Akzentfarbe. Buttons gibt es in vier Varianten: Primary (gefüllt), Secondary (outlined), Link (Unterstrich) und Icon-Button (quadratisch). Jede Variante ist in Default, Hover und Disabled definiert.',
-    'Navigation': 'Header-Navigation auf FCH-Blau-Hintergrund. Factoria-Bold UPPERCASE, kein Radius.',
     'Badges & Labels': 'Produktkachel-Labels im Shop — Factoria-Bold 13px, radius-none, farbkodiert nach Kategorie.',
-    'Cards': 'Teaser-, Spieltag- und Mitgliedschafts-Karten.',
   },
 
   components: [
@@ -236,21 +234,6 @@ export const fchHansaRostockSystem: DesignSystem = {
         { label: 'Disabled', bg: '#FFFFFF', textColor: '#A6D3EC', border: '2px solid #A6D3EC' },
       ],
     },
-    {
-      name: 'nav-item',
-      group: 'Navigation',
-      description: 'Haupt-Navigationslink in der blauen Header-Bar — Factoria-Bold UPPERCASE',
-      type: 'button',
-      height: 56, paddingX: 16, radiusValue: 0,
-      fontSize: 20, fontWeight: 700,
-      fontFamily: 'Factoria-Bold',
-      defaultContent: 'News',
-      variants: [
-        { label: 'Default', bg: 'transparent',       textColor: '#FFFFFF' },
-        { label: 'Hover',   bg: 'rgba(0,0,0,0.15)', textColor: '#FFFFFF' },
-        { label: 'Active',  bg: '#143A77',            textColor: '#FFFFFF' },
-      ],
-    },
     // ── Badges (Figma-Quelle: Components Page → "Badges" Component Set) ─────
     // height: 23px · paddingX: 6px · paddingY: 3px · radius: 0 · Factoria Bold 13px
     {
@@ -269,48 +252,6 @@ export const fchHansaRostockSystem: DesignSystem = {
         { label: 'Kinder', bg: '#143A77', textColor: '#FFFFFF', content: 'Kinder' },
         { label: 'Herren', bg: '#143A77', textColor: '#FFFFFF', content: 'Herren' },
       ],
-    },
-    {
-      name: 'news-teaser-card',
-      group: 'Cards',
-      description: 'News-Artikel-Teaser mit Bild, Überschrift und kurzem Text',
-      type: 'card',
-      height: 0, paddingX: 24, radiusValue: 0,
-      fontSize: 16, fontWeight: 400,
-      defaultContent: 'Meldung lesen',
-      variants: [
-        { label: 'Default', bg: '#FFFFFF', textColor: '#333333', border: '1px solid #DDDDDD' },
-        { label: 'Hover',   bg: '#EFEFEF', textColor: '#333333', border: '1px solid #DDDDDD' },
-      ],
-      cardContent: { heading: 'Meldung-Titel des Artikels', body: 'Kurze Beschreibung der News-Meldung in zwei bis drei Zeilen Fließtext.' },
-    },
-    {
-      name: 'match-ticker',
-      group: 'Cards',
-      description: 'Spieltag-Karte mit Vereinswappen, Ergebnis und Datum — FCH-Blau-Hintergrund',
-      type: 'card',
-      height: 160, paddingX: 32, radiusValue: 0,
-      fontSize: 52, fontWeight: 400,
-      defaultContent: '2 : 1',
-      variants: [
-        { label: 'Heimspiel',  bg: '#0080C9', textColor: '#FFFFFF' },
-        { label: 'Auswärtsspiel', bg: '#143A77', textColor: '#FFFFFF' },
-      ],
-      cardContent: { heading: '2 : 1', body: 'Hansa Rostock · Heimspiel' },
-    },
-    {
-      name: 'membership-card',
-      group: 'Cards',
-      description: 'Mitgliedschafts-Kategorie-Box mit Titel und CTA',
-      type: 'card',
-      height: 0, paddingX: 24, radiusValue: 20,
-      fontSize: 16, fontWeight: 400,
-      defaultContent: 'Jetzt Mitglied werden',
-      variants: [
-        { label: 'Default',     bg: '#FFFFFF', textColor: '#333333', border: '1px solid #DDDDDD' },
-        { label: 'Highlighted', bg: '#0080C9', textColor: '#FFFFFF' },
-      ],
-      cardContent: { heading: 'Mitgliedschaft Erwachsene', body: 'Ab 25 Jahre · Alle Vereinsvorteile' },
     },
     {
       name: 'search-input',
