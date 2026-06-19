@@ -64,6 +64,8 @@ export interface DesignSystem {
   source: string
   figmaFile?: string
   fontFaces?: string
+  logo?: string
+  coverImage?: string
   extractedAt: string
   colorGroups: string[]
   colors: ColorToken[]

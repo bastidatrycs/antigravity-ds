@@ -6,6 +6,7 @@ export const linearSystem: DesignSystem = {
   description: 'Dark-first product UI anchored in deep near-black backgrounds, cool grey type hierarchy, a single violet-purple brand accent, and Inter Variable at optical weights 510/590.',
   source: 'https://linear.app/',
   figmaFile: 'DblUcfrQuNVIjQRHCsVl32',
+  logo: '/logos/linear.svg',
   extractedAt: '2026-06-17',
   colorGroups: ['Brand', 'Surface', 'Border', 'Text', 'Semantic', 'Accent'],
   colors: [
