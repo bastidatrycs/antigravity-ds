@@ -150,7 +150,7 @@ function VariantCard({
   const meta = metaString(comp, variant)
 
   return (
-    <div className="border border-neutral-200 overflow-hidden flex flex-col">
+    <div className="rounded-xl border border-neutral-200 overflow-hidden flex flex-col">
       {/* Preview area — matches Figma 408×114 proportions */}
       <div
         className="flex items-center justify-center flex-1"
@@ -181,7 +181,7 @@ function BadgeGroupCard({
 }) {
   const font = comp.fontFamily ?? FALLBACK_FONT
   return (
-    <div className="col-span-full border border-neutral-200 overflow-hidden">
+    <div className="col-span-full rounded-xl border border-neutral-200 overflow-hidden">
       <div
         className="flex items-center flex-wrap gap-3 px-6 py-8"
         style={{ backgroundColor: previewBg, minHeight: 114 }}
@@ -233,7 +233,7 @@ function CardComponent({
   const font = comp.fontFamily ?? FALLBACK_FONT
   const meta = metaString(comp, variant)
   return (
-    <div className="border border-neutral-200 overflow-hidden flex flex-col">
+    <div className="rounded-xl border border-neutral-200 overflow-hidden flex flex-col">
       <div className="flex-1 p-5" style={{ backgroundColor: previewBg, minHeight: 114 }}>
         <div
           style={{
@@ -271,14 +271,16 @@ export function Components({ system }: { system: DesignSystem }) {
     system.colors.find((c) => c.token === 'surface-default')?.hex ?? '#FFFFFF'
 
   return (
-    <section id="components" className="space-y-3">
+    <section id="components" className="space-y-10">
       {/* Section header */}
-      <div className="flex items-center gap-3">
-        <h2 className="text-xs font-semibold tracking-[0.12em] uppercase text-neutral-400">Components</h2>
-        <div className="flex-1 h-px bg-neutral-100" />
-        <span className="text-xs text-neutral-400">
-          {system.components.length} components · {totalVariants} states
-        </span>
+      <div>
+        <div className="flex items-center justify-between">
+          <span className="text-[10px] font-bold tracking-[0.14em] uppercase text-neutral-400">Components</span>
+          <span className="text-[10px] text-neutral-400">
+            {system.components.length} components · {totalVariants} states
+          </span>
+        </div>
+        <div className="h-px bg-neutral-200 mt-3" />
       </div>
 
       <div className="space-y-14 pt-4">

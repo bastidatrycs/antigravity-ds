@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { DesignSystem } from '@/lib/types'
+import { CopyButton } from './CopyButton'
 
 function isLight(hex: string): boolean {
   const r = parseInt(hex.slice(1, 3), 16)
@@ -20,19 +21,31 @@ export function ColorPalette({ system }: { system: DesignSystem }) {
   }
 
   return (
-    <section id="colors" className="space-y-8">
-      <div className="flex items-center gap-3">
-        <h2 className="text-xs font-semibold tracking-[0.12em] uppercase text-neutral-400">Color Palette</h2>
-        <div className="flex-1 h-px bg-neutral-100" />
-        <span className="text-xs text-neutral-400">{system.colors.length} tokens</span>
+    <section id="colors" className="space-y-10">
+      {/* Section header */}
+      <div>
+        <div className="flex items-center justify-between">
+          <span className="text-[10px] font-bold tracking-[0.14em] uppercase text-neutral-400">Color Palette</span>
+          <span className="text-[10px] text-neutral-400">{system.colors.length} colors</span>
+        </div>
+        <div className="h-px bg-neutral-200 mt-3" />
       </div>
 
-      <div className="space-y-10">
+      <div className="space-y-12">
         {system.colorGroups.map((group) => {
           const groupColors = system.colors.filter((c) => c.group === group)
+          if (groupColors.length === 0) return null
+          const desc = system.colorGroupDescriptions?.[group]
+
           return (
-            <div key={group} className="space-y-3">
-              <div className="text-sm font-semibold text-neutral-500">{group}</div>
+            <div key={group} className="space-y-5">
+              {/* Group header */}
+              <div>
+                <h3 className="text-[22px] font-bold text-neutral-900">{group}</h3>
+                {desc && <p className="text-[13px] text-neutral-400 mt-2 max-w-2xl leading-relaxed">{desc}</p>}
+              </div>
+
+              {/* Color swatches */}
               <div className="grid grid-cols-5 gap-4">
                 {groupColors.map((color) => (
                   <div
@@ -40,7 +53,6 @@ export function ColorPalette({ system }: { system: DesignSystem }) {
                     onClick={() => copy(color.hex, color.token)}
                     className="cursor-pointer rounded-xl border border-neutral-200 overflow-hidden hover:border-neutral-400 hover:shadow-lg transition-all bg-white group"
                   >
-                    {/* Full-bleed swatch — no gap, clipped by overflow-hidden + rounded-xl */}
                     <div
                       className="w-full h-24"
                       style={{
@@ -50,7 +62,7 @@ export function ColorPalette({ system }: { system: DesignSystem }) {
                     />
                     <div className="px-3 pt-3 pb-3 space-y-1">
                       <div className="text-[13px] font-semibold text-neutral-800 truncate">{color.display}</div>
-                      <div className="text-[12px] font-mono font-medium" style={{ color: '#5E6AD2' }}>
+                      <div className="text-[11px] font-mono font-medium" style={{ color: '#5E6AD2' }}>
                         {copiedToken === color.token ? '✓ Copied!' : color.hex.toUpperCase()}
                       </div>
                       <div className="text-[11px] text-neutral-400 leading-snug">{color.role}</div>

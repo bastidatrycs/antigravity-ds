@@ -70,6 +70,8 @@ export interface DesignSystem {
   typography: TypographyToken[]
   spacing: SpacingToken[]
   radius: RadiusToken[]
+  colorGroupDescriptions?: Record<string, string>
+  typographyGroupDescriptions?: Partial<Record<'display' | 'body', string>>
   componentGroups: string[]
   componentGroupDescriptions?: Record<string, string>
   components: ComponentSpec[]

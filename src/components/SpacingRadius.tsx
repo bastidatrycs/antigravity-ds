@@ -3,51 +3,71 @@ import { CopyButton } from './CopyButton'
 
 export function SpacingRadius({ system }: { system: DesignSystem }) {
   return (
-    <section id="spacing" className="space-y-6">
-      <div className="flex items-center gap-3">
-        <h2 className="text-xs font-semibold tracking-[0.12em] uppercase text-neutral-400">Spacing & Radius</h2>
-        <div className="flex-1 h-px bg-neutral-100" />
+    <section id="spacing" className="space-y-10">
+      {/* Section header */}
+      <div>
+        <div className="flex items-center justify-between">
+          <span className="text-[10px] font-bold tracking-[0.14em] uppercase text-neutral-400">Spacing & Radius</span>
+          <span className="text-[10px] text-neutral-400">
+            {system.spacing.length} spacing · {system.radius.length} radius
+          </span>
+        </div>
+        <div className="h-px bg-neutral-200 mt-3" />
       </div>
 
-      <div className="grid grid-cols-2 gap-12">
+      <div className="grid grid-cols-2 gap-16">
         {/* Spacing */}
-        <div className="space-y-2">
-          <div className="text-sm font-semibold text-neutral-500 mb-4">Spacing Scale · base 4px</div>
-          {system.spacing.map((s) => (
-            <div key={s.token} className="flex items-center gap-4 group">
-              <div className="w-24 shrink-0 text-[13px] font-semibold text-neutral-700">
-                {s.token.replace('spacing-', '')}
+        <div className="space-y-5">
+          <div>
+            <h3 className="text-[22px] font-bold text-neutral-900">Spacing Scale</h3>
+            <p className="text-[13px] text-neutral-400 mt-2">Basis 4px-Grid. Konsistente Abstände von xxs (4px) bis section (96px).</p>
+          </div>
+          <div className="border-t border-neutral-200">
+            {system.spacing.map((s) => (
+              <div key={s.token} className="flex items-center gap-4 py-3 border-b border-neutral-200 group">
+                <div className="w-20 shrink-0">
+                  <div className="text-[13px] font-bold text-neutral-800">{s.token.replace('spacing-', '')}</div>
+                  <div className="text-[11px] text-neutral-400">{s.value}px</div>
+                </div>
+                <div
+                  className="h-4 rounded-sm shrink-0"
+                  style={{
+                    width: `${Math.min(s.value * 2.4, 280)}px`,
+                    backgroundColor: '#5E6AD2',
+                    opacity: 0.35,
+                  }}
+                />
+                <span className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity">
+                  <CopyButton value={`var(--${s.token})`} label={`--${s.token.replace('spacing-', '')}`} />
+                </span>
               </div>
-              <div
-                className="h-5 rounded bg-indigo-400/50 shrink-0"
-                style={{ width: `${Math.min(s.value * 3.8, 320)}px` }}
-              />
-              <div className="text-xs text-neutral-400 w-10">{s.value}px</div>
-              <span className="opacity-0 group-hover:opacity-100 transition-opacity">
-                <CopyButton value={`var(--${s.token})`} label={`--${s.token.replace('spacing-', '')}`} />
-              </span>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
         {/* Radius */}
-        <div className="space-y-4">
-          <div className="text-sm font-semibold text-neutral-500 mb-4">Border Radius</div>
-          <div className="flex flex-wrap gap-6">
+        <div className="space-y-5">
+          <div>
+            <h3 className="text-[22px] font-bold text-neutral-900">Border Radius</h3>
+            <p className="text-[13px] text-neutral-400 mt-2">Von kantig (none) bis Pill (full). Bei FCH dominiert radius-none.</p>
+          </div>
+          <div className="border-t border-neutral-200">
             {system.radius.map((r) => (
-              <div key={r.token} className="flex flex-col items-center gap-2.5 group">
+              <div key={r.token} className="flex items-center gap-5 py-4 border-b border-neutral-200 group">
                 <div
-                  className="w-16 h-16 border border-neutral-200 bg-neutral-100"
+                  className="w-12 h-12 shrink-0 border-2 border-neutral-300 bg-neutral-100"
                   style={{ borderRadius: r.value === 9999 ? '9999px' : `${r.value}px` }}
                 />
-                <div className="text-center">
-                  <div className="text-[12px] font-semibold text-neutral-600">
-                    {r.token.replace('radius-', '')}
-                  </div>
-                  <div className="text-[11px] text-neutral-400">
-                    {r.value === 9999 ? '∞' : `${r.value}px`}
+                <div className="flex-1">
+                  <div className="text-[13px] font-bold text-neutral-800">{r.token.replace('radius-', '')}</div>
+                  <div className="text-[11px] text-neutral-400 mt-0.5">
+                    {r.value === 9999 ? '∞ / pill' : `${r.value}px`}
+                    {r.usage ? ` · ${r.usage}` : ''}
                   </div>
                 </div>
+                <span className="opacity-0 group-hover:opacity-100 transition-opacity">
+                  <CopyButton value={`var(--${r.token})`} label={`--${r.token.replace('radius-', '')}`} />
+                </span>
               </div>
             ))}
           </div>

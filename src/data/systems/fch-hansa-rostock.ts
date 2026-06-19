@@ -42,6 +42,19 @@ export const fchHansaRostockSystem: DesignSystem = {
 
   colorGroups: ['Brand', 'Surface', 'Border', 'Text', 'Semantic'],
 
+  colorGroupDescriptions: {
+    'Brand':    'FCH-Blau (#0080C9) als dominante Markenfarbe — Header, Überschriften und primäre CTAs. Navy (#143A77) als dunkler Tiefenakzent in Headern und Gradienten. Vereinsrot (#9E0101) für spezifische Hero-Momente.',
+    'Surface':  'Weiß als Seiten- und Card-Hintergrund, Hellgrau (#EFEFEF) für Teaser-Boxen, Schwarz (85% Opacity) für modales Overlay.',
+    'Border':   'Subtile Trennlinien — Standard #DDDDDD, feiner #EFEFEF für kaum sichtbare Rahmen.',
+    'Text':     'Dunkelgrau (#333333) für Fließtext, Mittelgrau (#8D8D8D) für Metadaten. FCH-Blau als Linkfarbe.',
+    'Semantic': 'Grün für positive Aktionen, Rot für Fehler und destruktive Aktionen, Orange für Warnzustände.',
+  },
+
+  typographyGroupDescriptions: {
+    display: 'Factoria-Bold in Großbuchstaben, immer in FCH-Blau (#0080C9). Von der Helden-Zahl (87px) bis zur kleinsten Unterüberschrift h6 (20px). Alle Heading-Größen entsprechen Bootstrap 5 h1–h6.',
+    body: 'noway-regular-webfont für alle Fließtexte, Nav-Links und Labels. Lesbar, klar und sachlich — kein Uppercase, kein Factoria.',
+  },
+
   colors: [
     // Brand
     { token: 'brand-primary',   display: 'primary',   hex: '#0080C9', role: 'FCH-Blau · Header · H1/H2 · primäre CTAs',    group: 'Brand' },
