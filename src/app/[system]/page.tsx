@@ -29,7 +29,7 @@ export default async function SystemPage({ params }: { params: Promise<{ system:
 
       {/* Main content */}
       <div className="flex-1 bg-[#fafafa] overflow-auto">
-        <main className="max-w-[1256px] mx-auto px-10 py-10 space-y-14">
+        <main className="max-w-[1256px] mx-auto px-10 py-10 space-y-28">
           {/* System header */}
           <div className="flex items-start justify-between gap-8">
             <div className="space-y-2">
