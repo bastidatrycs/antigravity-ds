@@ -68,12 +68,12 @@ export const fchHansaRostockSystem: DesignSystem = {
   ],
 
   typography: [
-    { token: 'display-xl',   family: 'Factoria-Bold', size: 87, weight: 400, lineHeight: 87,  tracking: 0,    usage: 'Hero-Score, übergroße Zahlen',          section: 'display' },
-    { token: 'display-lg',   family: 'Factoria-Bold', size: 60, weight: 400, lineHeight: 72,  tracking: 0,    usage: 'H1 Hero-Headline (UPPERCASE)',           section: 'display' },
-    { token: 'display-md',   family: 'Factoria-Bold', size: 50, weight: 400, lineHeight: 60,  tracking: 0,    usage: 'H2 Sektions-Titel (UPPERCASE)',          section: 'display' },
-    { token: 'display-sm',   family: 'Factoria-Bold', size: 38, weight: 400, lineHeight: 46,  tracking: 0,    usage: 'H3 Display · Sub-Sektions-Kopf',        section: 'display' },
-    { token: 'title-lg',     family: 'Factoria-Bold', size: 30, weight: 400, lineHeight: 36,  tracking: 0,    usage: 'Große Karten-Titel',                    section: 'display' },
-    { token: 'title-md',     family: 'Factoria-Bold', size: 26, weight: 400, lineHeight: 32,  tracking: 0,    usage: 'Karten-Überschriften (H3)',              section: 'display' },
+    { token: 'display-xl',   family: 'Factoria-Bold', size: 87, weight: 700, lineHeight: 87,  tracking: 0,    usage: 'Hero-Score, übergroße Zahlen · display-1',  section: 'display' },
+    { token: 'display-lg',   family: 'Factoria-Bold', size: 60, weight: 700, lineHeight: 72,  tracking: 0,    usage: 'H1 · UPPERCASE · FCH-Blau',                 section: 'display' },
+    { token: 'display-md',   family: 'Factoria-Bold', size: 50, weight: 700, lineHeight: 60,  tracking: 0,    usage: 'H2 · UPPERCASE · FCH-Blau',                 section: 'display' },
+    { token: 'display-sm',   family: 'Factoria-Bold', size: 38, weight: 700, lineHeight: 46,  tracking: 0,    usage: 'H3 · UPPERCASE · FCH-Blau',                 section: 'display' },
+    { token: 'title-lg',     family: 'Factoria-Bold', size: 30, weight: 700, lineHeight: 36,  tracking: 0,    usage: 'H4 · UPPERCASE · FCH-Blau',                 section: 'display' },
+    { token: 'title-md',     family: 'Factoria-Bold', size: 26, weight: 700, lineHeight: 32,  tracking: 0,    usage: 'H5 · UPPERCASE · FCH-Blau',                 section: 'display' },
     { token: 'title-sm',     family: 'Arial',         size: 20, weight: 700, lineHeight: 28,  tracking: 0,    usage: 'Membership-Titel · kleine Sektionsköpfe', section: 'body' },
     { token: 'body-lg',      family: 'noway-regular-webfont', size: 20, weight: 400, lineHeight: 28, tracking: 0, usage: 'Nav-Links · Button-Labels (UPPERCASE)', section: 'body' },
     { token: 'body-md',      family: 'noway-regular-webfont', size: 16, weight: 400, lineHeight: 24, tracking: 0, usage: 'Standard-Fließtext',                section: 'body' },
@@ -104,13 +104,31 @@ export const fchHansaRostockSystem: DesignSystem = {
   componentGroups: ['Buttons', 'Navigation', 'Badges & Labels', 'Cards', 'Form Controls'],
 
   components: [
+    // ── Shop-Button (Figma-Quelle: Components Page → "Button") ──────────────
+    // Solid, kein Pinsel-Hintergrund. Factoria Bold, 16px, kein Uppercase.
     {
-      name: 'button-primary-blue',
+      name: 'button-primary',
       group: 'Buttons',
-      description: 'Primärer CTA — FCH-Blau, Pinsel-SVG-Textur, Factoria-Bold UPPERCASE',
+      description: 'Shop-CTA — FCH-Blau, Factoria Bold 16px, kein Uppercase (Figma-spec)',
+      type: 'button',
+      height: 40, paddingX: 24, radiusValue: 0,
+      fontSize: 16, fontWeight: 700,
+      defaultContent: 'In den Warenkorb',
+      variants: [
+        { label: 'Default',  bg: '#0080C9', textColor: '#FFFFFF' },
+        { label: 'Hover',    bg: '#0070B0', textColor: '#FFFFFF' },
+        { label: 'Disabled', bg: '#DDDDDD', textColor: '#8D8D8D', opacity: 0.4 },
+      ],
+    },
+    // ── Hero-Button (fch.de Startseite, Pinsel-Textur-SVG) ──────────────────
+    // Größer, Uppercase. Nur auf der Vereinswebsite, nicht im Shopware-Shop.
+    {
+      name: 'button-hero-blue',
+      group: 'Buttons',
+      description: 'Hero-CTA (fch.de) — FCH-Blau, Pinsel-SVG-Textur, Factoria-Bold UPPERCASE',
       type: 'button',
       height: 64, paddingX: 80, radiusValue: 0,
-      fontSize: 20, fontWeight: 400,
+      fontSize: 20, fontWeight: 700,
       defaultContent: 'Jetzt entdecken',
       variants: [
         { label: 'Default',  bg: '#0080C9', textColor: '#FFFFFF' },
@@ -119,12 +137,12 @@ export const fchHansaRostockSystem: DesignSystem = {
       ],
     },
     {
-      name: 'button-primary-red',
+      name: 'button-hero-red',
       group: 'Buttons',
-      description: 'Roter CTA — Spieltag- und Ergebnis-Kontext',
+      description: 'Hero-CTA (fch.de) — Vereinsrot, Pinsel-SVG-Textur, Factoria-Bold UPPERCASE',
       type: 'button',
       height: 64, paddingX: 80, radiusValue: 0,
-      fontSize: 20, fontWeight: 400,
+      fontSize: 20, fontWeight: 700,
       defaultContent: 'Tabelle ansehen',
       variants: [
         { label: 'Default',  bg: '#9E0101', textColor: '#FFFFFF' },
@@ -133,12 +151,12 @@ export const fchHansaRostockSystem: DesignSystem = {
       ],
     },
     {
-      name: 'button-secondary-white',
+      name: 'button-hero-white',
       group: 'Buttons',
-      description: 'Ghost-Button auf blauem Hintergrund — weißer Pinsel-Hintergrund',
+      description: 'Hero-Ghost-CTA (fch.de) — Weißer Pinsel, Blauer Text, Factoria-Bold UPPERCASE',
       type: 'button',
       height: 64, paddingX: 80, radiusValue: 0,
-      fontSize: 20, fontWeight: 400,
+      fontSize: 20, fontWeight: 700,
       defaultContent: 'Infos zum Spiel',
       variants: [
         { label: 'Default',  bg: '#FFFFFF', textColor: '#0080C9' },
@@ -152,7 +170,7 @@ export const fchHansaRostockSystem: DesignSystem = {
       description: 'Haupt-Navigationslink in der blauen Header-Bar — Factoria-Bold UPPERCASE',
       type: 'button',
       height: 56, paddingX: 16, radiusValue: 0,
-      fontSize: 20, fontWeight: 400,
+      fontSize: 20, fontWeight: 700,
       defaultContent: 'News',
       variants: [
         { label: 'Default', bg: 'transparent',       textColor: '#FFFFFF' },
@@ -160,18 +178,23 @@ export const fchHansaRostockSystem: DesignSystem = {
         { label: 'Active',  bg: '#143A77',            textColor: '#FFFFFF' },
       ],
     },
+    // ── Badges (Figma-Quelle: Components Page → "Badges" Component Set) ─────
+    // height: 23px · paddingX: 6px · paddingY: 3px · radius: 0 · Factoria Bold 13px
     {
-      name: 'badge-spielstatus',
+      name: 'badge-produkt',
       group: 'Badges & Labels',
-      description: 'Statuskennzeichnung für Spieltage und Ergebnisse',
+      description: 'Produktkachel-Label — Factoria Bold 13px, radius-none (Figma-spec)',
       type: 'badge-set',
-      height: 24, paddingX: 8, radiusValue: 4,
-      fontSize: 11, fontWeight: 700,
-      defaultContent: 'Live',
+      height: 23, paddingX: 6, radiusValue: 0,
+      fontSize: 13, fontWeight: 700,
+      defaultContent: 'Neu',
       variants: [
-        { label: 'Live',          bg: '#9E0101', textColor: '#FFFFFF', content: 'Live' },
-        { label: 'Anstehend',     bg: '#0080C9', textColor: '#FFFFFF', content: 'Anstehend' },
-        { label: 'Abgeschlossen', bg: '#8D8D8D', textColor: '#FFFFFF', content: 'Abgeschlossen' },
+        { label: 'Neu',    bg: '#007E54', textColor: '#FFFFFF', content: 'Neu' },
+        { label: 'Sale',   bg: '#E52721', textColor: '#FFFFFF', content: '%' },
+        { label: 'Tipp',   bg: '#0080C9', textColor: '#FFFFFF', content: 'Tipp' },
+        { label: 'Damen',  bg: '#143A77', textColor: '#FFFFFF', content: 'Damen' },
+        { label: 'Kinder', bg: '#143A77', textColor: '#FFFFFF', content: 'Kinder' },
+        { label: 'Herren', bg: '#143A77', textColor: '#FFFFFF', content: 'Herren' },
       ],
     },
     {
