@@ -27,13 +27,13 @@ export default async function SystemPage({ params }: { params: Promise<{ system:
   if (!system) notFound()
 
   return (
-    <div className="flex min-h-screen bg-white">
+    <div className="flex min-h-screen">
       {system.fontFaces && (
         <style dangerouslySetInnerHTML={{ __html: system.fontFaces }} />
       )}
 
       {/* Sidebar */}
-      <aside className="w-[200px] shrink-0 border-r border-neutral-100 flex flex-col sticky top-0 h-screen">
+      <aside className="w-[200px] shrink-0 bg-white border-r border-neutral-100 flex flex-col sticky top-0 h-screen">
         {/* Logo */}
         <div className="px-5 py-4 border-b border-neutral-100">
           <Link href="/">
@@ -85,7 +85,7 @@ export default async function SystemPage({ params }: { params: Promise<{ system:
       </aside>
 
       {/* Main content */}
-      <div className="flex-1 overflow-auto">
+      <div className="flex-1 bg-[#fafafa] overflow-auto">
         {/* Top bar */}
         <header className="sticky top-0 z-10 border-b border-neutral-100 bg-white/90 backdrop-blur-sm px-8 py-3 flex items-center gap-2">
           <Link href="/" className="text-[11px] text-neutral-400 hover:text-neutral-600 transition-colors">
@@ -99,7 +99,7 @@ export default async function SystemPage({ params }: { params: Promise<{ system:
           </div>
         </header>
 
-        <main className="px-8 py-10 space-y-14 max-w-[1100px]">
+        <main className="max-w-[1256px] mx-auto px-8 py-10 space-y-14">
           {/* System header */}
           <div className="space-y-2">
             <h1 className="text-[32px] font-semibold tracking-[-0.02em] text-neutral-900">{system.name}</h1>

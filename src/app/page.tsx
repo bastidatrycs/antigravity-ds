@@ -4,17 +4,17 @@ import { systems } from '@/data/registry'
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen bg-white">
+    <div className="flex min-h-screen">
       {/* Sidebar */}
-      <aside className="w-[52px] shrink-0 border-r border-neutral-100 flex flex-col items-center pt-4">
+      <aside className="w-[52px] shrink-0 bg-white border-r border-neutral-100 flex flex-col items-center pt-4">
         <Link href="/">
           <Image src="/logos/datrycs-picto.svg" alt="Datrycs" width={24} height={29} />
         </Link>
       </aside>
 
-      {/* Main content */}
-      <main className="flex-1 px-10 py-10">
-        <div className="max-w-[960px]">
+      {/* Main area */}
+      <main className="flex-1 bg-[#fafafa]">
+        <div className="max-w-[1256px] mx-auto px-10 py-10">
           <div className="mb-10">
             <h1 className="text-[28px] font-semibold tracking-[-0.02em] text-neutral-900 mb-1.5">
               Design System Library
