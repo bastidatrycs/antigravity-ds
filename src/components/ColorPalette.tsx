@@ -25,8 +25,8 @@ export function ColorPalette({ system }: { system: DesignSystem }) {
       {/* Section header */}
       <div>
         <div className="flex items-center justify-between">
-          <span className="text-[10px] font-bold tracking-[0.14em] uppercase text-neutral-400">Color Palette</span>
-          <span className="text-[10px] text-neutral-400">{system.colors.length} colors</span>
+          <span className="text-[10px] font-bold tracking-[0.14em] uppercase text-meta">Color Palette</span>
+          <span className="text-[10px] text-meta">{system.colors.length} colors</span>
         </div>
         <div className="h-px bg-neutral-200 mt-3" />
       </div>
@@ -42,7 +42,7 @@ export function ColorPalette({ system }: { system: DesignSystem }) {
               {/* Group header */}
               <div>
                 <h3 className="text-[22px] font-bold text-neutral-900">{group}</h3>
-                {desc && <p className="text-[13px] text-neutral-400 mt-2 max-w-2xl leading-relaxed">{desc}</p>}
+                {desc && <p className="text-[13px] text-meta mt-2 max-w-2xl leading-relaxed">{desc}</p>}
               </div>
 
               {/* Color swatches */}
@@ -65,7 +65,7 @@ export function ColorPalette({ system }: { system: DesignSystem }) {
                       <div className="text-[11px] font-mono font-medium" style={{ color: '#5E6AD2' }}>
                         {copiedToken === color.token ? '✓ Copied!' : color.hex.toUpperCase()}
                       </div>
-                      <div className="text-[11px] text-neutral-400 leading-snug">{color.role}</div>
+                      <div className="text-[11px] text-meta leading-snug">{color.role}</div>
                     </div>
                   </div>
                 ))}

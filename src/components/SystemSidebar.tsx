@@ -45,7 +45,7 @@ export function SystemSidebar() {
       <div className="px-6 pb-5">
         <Link
           href="/"
-          className="flex items-center gap-1.5 text-[11px] text-neutral-400 hover:text-neutral-700 transition-colors"
+          className="flex items-center gap-1.5 text-[11px] text-meta hover:text-neutral-700 transition-colors"
         >
           <span>←</span>
           <span>Zurück zur Übersicht</span>
@@ -64,7 +64,7 @@ export function SystemSidebar() {
             className={`text-[12px] py-1.5 transition-colors ${
               active === id
                 ? 'text-neutral-900 font-medium'
-                : 'text-neutral-400 hover:text-neutral-700'
+                : 'text-meta hover:text-neutral-700'
             }`}
           >
             {label}

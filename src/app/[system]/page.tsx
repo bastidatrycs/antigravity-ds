@@ -39,21 +39,21 @@ export default async function SystemPage({ params }: { params: Promise<{ system:
                 )}
                 <h1 className="text-[28px] font-semibold tracking-[-0.02em] text-neutral-900">{system.name}</h1>
               </div>
-              <p className="text-neutral-500 text-[13px] leading-relaxed max-w-2xl">{system.description}</p>
+              <p className="text-meta text-[13px] leading-relaxed max-w-2xl">{system.description}</p>
               <div className="flex items-center gap-3 pt-1">
                 <a href={system.source} target="_blank" rel="noopener noreferrer"
-                  className="text-[11px] text-neutral-400 hover:text-neutral-600 transition-colors">
+                  className="text-[11px] text-meta hover:text-neutral-600 transition-colors">
                   {system.source} ↗
                 </a>
                 <span className="text-neutral-200">·</span>
-                <span className="text-[11px] text-neutral-400">
+                <span className="text-[11px] text-meta">
                   {system.colors.length} colors · {system.typography.length} type tokens · {system.spacing.length} spacing
                 </span>
                 {system.figmaFile && (
                   <>
                     <span className="text-neutral-200">·</span>
                     <a href={`https://www.figma.com/design/${system.figmaFile}`} target="_blank" rel="noopener noreferrer"
-                      className="text-[11px] text-neutral-400 hover:text-neutral-600 transition-colors">
+                      className="text-[11px] text-meta hover:text-neutral-600 transition-colors">
                       Open in Figma ↗
                     </a>
                   </>
@@ -72,9 +72,9 @@ export default async function SystemPage({ params }: { params: Promise<{ system:
 
           {/* Footer */}
           <footer className="border-t border-neutral-100 pt-8 pb-4 flex items-center justify-between">
-            <span className="text-[11px] text-neutral-400">Design Systems · by Datrycs · {system.extractedAt}</span>
+            <span className="text-[11px] text-meta">Design Systems · by Datrycs · {system.extractedAt}</span>
             <a href={system.source} target="_blank" rel="noopener noreferrer"
-              className="text-[11px] text-neutral-400 hover:text-neutral-600">
+              className="text-[11px] text-meta hover:text-neutral-600">
               {system.source}
             </a>
           </footer>

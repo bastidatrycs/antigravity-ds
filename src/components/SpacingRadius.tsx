@@ -7,8 +7,8 @@ export function SpacingRadius({ system }: { system: DesignSystem }) {
       {/* Section header */}
       <div>
         <div className="flex items-center justify-between">
-          <span className="text-[10px] font-bold tracking-[0.14em] uppercase text-neutral-400">Spacing & Radius</span>
-          <span className="text-[10px] text-neutral-400">
+          <span className="text-[10px] font-bold tracking-[0.14em] uppercase text-meta">Spacing & Radius</span>
+          <span className="text-[10px] text-meta">
             {system.spacing.length} spacing · {system.radius.length} radius
           </span>
         </div>
@@ -20,14 +20,14 @@ export function SpacingRadius({ system }: { system: DesignSystem }) {
         <div className="space-y-5">
           <div>
             <h3 className="text-[22px] font-bold text-neutral-900">Spacing Scale</h3>
-            <p className="text-[13px] text-neutral-400 mt-2">Basis 4px-Grid. Konsistente Abstände von xxs (4px) bis section (96px).</p>
+            <p className="text-[13px] text-meta mt-2">Basis 4px-Grid. Konsistente Abstände von xxs (4px) bis section (96px).</p>
           </div>
           <div className="border-t border-neutral-200">
             {system.spacing.map((s) => (
               <div key={s.token} className="flex items-center gap-4 py-3 border-b border-neutral-200 group">
                 <div className="w-20 shrink-0">
                   <div className="text-[13px] font-bold text-neutral-800">{s.token.replace('spacing-', '')}</div>
-                  <div className="text-[11px] text-neutral-400">{s.value}px</div>
+                  <div className="text-[11px] text-meta">{s.value}px</div>
                 </div>
                 <div
                   className="h-4 rounded-sm shrink-0"
@@ -49,7 +49,7 @@ export function SpacingRadius({ system }: { system: DesignSystem }) {
         <div className="space-y-5">
           <div>
             <h3 className="text-[22px] font-bold text-neutral-900">Border Radius</h3>
-            <p className="text-[13px] text-neutral-400 mt-2">Von kantig (none) bis Pill (full). Bei FCH dominiert radius-none.</p>
+            <p className="text-[13px] text-meta mt-2">Von kantig (none) bis Pill (full). Bei FCH dominiert radius-none.</p>
           </div>
           <div className="border-t border-neutral-200">
             {system.radius.map((r) => (
@@ -60,7 +60,7 @@ export function SpacingRadius({ system }: { system: DesignSystem }) {
                 />
                 <div className="flex-1">
                   <div className="text-[13px] font-bold text-neutral-800">{r.token.replace('radius-', '')}</div>
-                  <div className="text-[11px] text-neutral-400 mt-0.5">
+                  <div className="text-[11px] text-meta mt-0.5">
                     {r.value === 9999 ? '∞ / pill' : `${r.value}px`}
                     {r.usage ? ` · ${r.usage}` : ''}
                   </div>

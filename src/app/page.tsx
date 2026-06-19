@@ -19,7 +19,7 @@ export default function Home() {
             <h1 className="text-[28px] font-semibold tracking-[-0.02em] text-neutral-900 mb-1.5">
               Design System Library
             </h1>
-            <p className="text-[13px] text-neutral-500 max-w-lg leading-relaxed">
+            <p className="text-[13px] text-meta max-w-lg leading-relaxed">
               Extracted design tokens from real products — color palettes, typography, spacing and components, ready for developers.
             </p>
           </div>
@@ -72,7 +72,7 @@ export default function Home() {
                         {system.name}
                       </span>
                     </div>
-                    <p className="text-[11px] text-neutral-500 leading-relaxed line-clamp-2 mb-3.5">
+                    <p className="text-[11px] text-meta leading-relaxed line-clamp-2 mb-3.5">
                       {system.description}
                     </p>
                   </div>
@@ -83,7 +83,7 @@ export default function Home() {
                     <Stat value={system.typography.length} label="Type" />
                     <Stat value={system.spacing.length} label="Spacing" />
                     <Stat value={system.components.length} label="Components" />
-                    <span className="ml-auto text-[10px] text-neutral-400 tabular-nums">{system.extractedAt}</span>
+                    <span className="ml-auto text-[10px] text-meta tabular-nums">{system.extractedAt}</span>
                   </div>
                 </Link>
               )
@@ -92,11 +92,11 @@ export default function Home() {
             {/* Add placeholder */}
             <div className="rounded-xl border border-dashed border-neutral-200 flex flex-col items-center justify-center text-center gap-3 min-h-[260px] bg-neutral-50/50">
               <div className="w-9 h-9 rounded-full border-2 border-dashed border-neutral-300 flex items-center justify-center">
-                <span className="text-neutral-400 text-lg leading-none">+</span>
+                <span className="text-meta text-lg leading-none">+</span>
               </div>
               <div>
-                <div className="text-[12px] font-medium text-neutral-500">Add a design system</div>
-                <div className="text-[11px] text-neutral-400 mt-0.5">Run the extractor on any website</div>
+                <div className="text-[12px] font-medium text-meta">Add a design system</div>
+                <div className="text-[11px] text-meta mt-0.5">Run the extractor on any website</div>
               </div>
             </div>
           </div>
@@ -110,7 +110,7 @@ function Stat({ value, label }: { value: number; label: string }) {
   return (
     <div className="flex items-baseline gap-1">
       <span className="text-[11px] font-semibold text-neutral-800 tabular-nums">{value}</span>
-      <span className="text-[10px] text-neutral-400">{label}</span>
+      <span className="text-[10px] text-meta">{label}</span>
     </div>
   )
 }

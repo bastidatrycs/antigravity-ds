@@ -164,7 +164,7 @@ function VariantCard({
       {/* Info area — matches Figma 408×80 with 20px padding */}
       <div className="border-t border-neutral-200 px-5 py-5">
         <div className="text-[14px] font-semibold text-neutral-800 leading-none">{variant.label}</div>
-        <div className="text-[11px] text-neutral-400 mt-1.5 leading-snug">{meta}</div>
+        <div className="text-[11px] text-meta mt-1.5 leading-snug">{meta}</div>
       </div>
     </div>
   )
@@ -207,13 +207,13 @@ function BadgeGroupCard({
             >
               {v.content ?? v.label}
             </div>
-            <span className="text-[10px] text-neutral-400">{v.label}</span>
+            <span className="text-[10px] text-meta">{v.label}</span>
           </div>
         ))}
       </div>
       <div className="border-t border-neutral-200 px-5 py-5">
         <div className="text-[14px] font-semibold text-neutral-800 leading-none">{toTitle(comp.name)}</div>
-        <div className="text-[11px] text-neutral-400 mt-1.5">{comp.description}</div>
+        <div className="text-[11px] text-meta mt-1.5">{comp.description}</div>
       </div>
     </div>
   )
@@ -255,7 +255,7 @@ function CardComponent({
       </div>
       <div className="border-t border-neutral-200 px-5 py-5">
         <div className="text-[14px] font-semibold text-neutral-800 leading-none">{variant.label}</div>
-        <div className="text-[11px] text-neutral-400 mt-1.5 leading-snug">{meta}</div>
+        <div className="text-[11px] text-meta mt-1.5 leading-snug">{meta}</div>
       </div>
     </div>
   )
@@ -275,8 +275,8 @@ export function Components({ system }: { system: DesignSystem }) {
       {/* Section header */}
       <div>
         <div className="flex items-center justify-between">
-          <span className="text-[10px] font-bold tracking-[0.14em] uppercase text-neutral-400">Components</span>
-          <span className="text-[10px] text-neutral-400">
+          <span className="text-[10px] font-bold tracking-[0.14em] uppercase text-meta">Components</span>
+          <span className="text-[10px] text-meta">
             {system.components.length} components · {totalVariants} states
           </span>
         </div>
@@ -295,7 +295,7 @@ export function Components({ system }: { system: DesignSystem }) {
               <div className="space-y-3">
                 <h3 className="text-[28px] font-bold text-neutral-900 leading-tight">{group}</h3>
                 {groupDesc && (
-                  <p className="text-[13px] text-neutral-500 leading-relaxed max-w-3xl">{groupDesc}</p>
+                  <p className="text-[13px] text-meta leading-relaxed max-w-3xl">{groupDesc}</p>
                 )}
               </div>
 
@@ -306,7 +306,7 @@ export function Components({ system }: { system: DesignSystem }) {
                     {/* Sub-section header — matches Figma component name + description */}
                     <div>
                       <div className="text-[16px] font-semibold text-neutral-900">{toTitle(comp.name)}</div>
-                      <div className="text-[12px] text-neutral-400 mt-0.5">{comp.description}</div>
+                      <div className="text-[12px] text-meta mt-0.5">{comp.description}</div>
                     </div>
 
                     {/* Variant grid */}

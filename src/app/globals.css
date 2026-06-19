@@ -7,3 +7,9 @@
 body {
   font-family: var(--font-inter), Inter, system-ui, sans-serif;
 }
+
+/* All descriptive / meta text: Inter Medium #7A7A7A */
+.text-meta {
+  color: #7A7A7A;
+  font-weight: 500;
+}

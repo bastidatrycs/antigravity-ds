@@ -45,8 +45,8 @@ export function Typography({ system }: { system: DesignSystem }) {
       {/* Section header */}
       <div>
         <div className="flex items-center justify-between">
-          <span className="text-[10px] font-bold tracking-[0.14em] uppercase text-neutral-400">Typography</span>
-          <span className="text-[10px] text-neutral-400">{system.typography.length} tokens</span>
+          <span className="text-[10px] font-bold tracking-[0.14em] uppercase text-meta">Typography</span>
+          <span className="text-[10px] text-meta">{system.typography.length} tokens</span>
         </div>
         <div className="h-px bg-neutral-200 mt-3" />
       </div>
@@ -61,7 +61,7 @@ export function Typography({ system }: { system: DesignSystem }) {
             {/* Group header */}
             <div>
               <h3 className="text-[22px] font-bold text-neutral-900">{GROUP_LABELS[key]}</h3>
-              {desc && <p className="text-[13px] text-neutral-400 mt-2 max-w-2xl leading-relaxed">{desc}</p>}
+              {desc && <p className="text-[13px] text-meta mt-2 max-w-2xl leading-relaxed">{desc}</p>}
             </div>
 
             {/* Token rows */}
@@ -72,7 +72,7 @@ export function Typography({ system }: { system: DesignSystem }) {
                   <div className="flex items-start justify-between">
                     <div>
                       <div className="text-[13px] font-bold text-neutral-800">{t.token}</div>
-                      <div className="text-[11px] text-neutral-400 mt-0.5">
+                      <div className="text-[11px] text-meta mt-0.5">
                         {t.size}px / {t.weight} / lh {t.lineHeight}px
                         {t.tracking ? ` / ls ${t.tracking}px` : ''}
                         {' · '}{t.usage}
