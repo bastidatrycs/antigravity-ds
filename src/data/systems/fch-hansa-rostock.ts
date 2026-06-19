@@ -68,17 +68,17 @@ export const fchHansaRostockSystem: DesignSystem = {
   ],
 
   typography: [
-    { token: 'display-xl',   family: 'Factoria-Bold', size: 87, weight: 700, lineHeight: 87,  tracking: 0,    usage: 'Hero-Score, übergroße Zahlen · display-1',  section: 'display' },
-    { token: 'display-lg',   family: 'Factoria-Bold', size: 60, weight: 700, lineHeight: 72,  tracking: 0,    usage: 'H1 · UPPERCASE · FCH-Blau',                 section: 'display' },
-    { token: 'display-md',   family: 'Factoria-Bold', size: 50, weight: 700, lineHeight: 60,  tracking: 0,    usage: 'H2 · UPPERCASE · FCH-Blau',                 section: 'display' },
-    { token: 'display-sm',   family: 'Factoria-Bold', size: 38, weight: 700, lineHeight: 46,  tracking: 0,    usage: 'H3 · UPPERCASE · FCH-Blau',                 section: 'display' },
-    { token: 'title-lg',     family: 'Factoria-Bold', size: 30, weight: 700, lineHeight: 36,  tracking: 0,    usage: 'H4 · UPPERCASE · FCH-Blau',                 section: 'display' },
-    { token: 'title-md',     family: 'Factoria-Bold', size: 26, weight: 700, lineHeight: 32,  tracking: 0,    usage: 'H5 · UPPERCASE · FCH-Blau',                 section: 'display' },
-    { token: 'title-sm',     family: 'Arial',         size: 20, weight: 700, lineHeight: 28,  tracking: 0,    usage: 'Membership-Titel · kleine Sektionsköpfe', section: 'body' },
-    { token: 'body-lg',      family: 'noway-regular-webfont', size: 20, weight: 400, lineHeight: 28, tracking: 0, usage: 'Nav-Links · Button-Labels (UPPERCASE)', section: 'body' },
-    { token: 'body-md',      family: 'noway-regular-webfont', size: 16, weight: 400, lineHeight: 24, tracking: 0, usage: 'Standard-Fließtext',                section: 'body' },
-    { token: 'label-md',     family: 'noway-regular-webfont', size: 14, weight: 400, lineHeight: 20, tracking: 0, usage: 'Sekundärer Text · Bildunterschriften', section: 'body' },
-    { token: 'caption',      family: 'noway-regular-webfont', size: 13, weight: 400, lineHeight: 18, tracking: 0, usage: 'Metadaten · Zeitstempel',            section: 'body' },
+    { token: 'display', family: 'Factoria-Bold', size: 87, weight: 700, lineHeight: 87, tracking: 0, usage: 'Hero-Score · übergroße Zahlen · display-1', section: 'display' },
+    { token: 'h1',      family: 'Factoria-Bold', size: 60, weight: 700, lineHeight: 72, tracking: 0, usage: 'Hauptüberschrift · UPPERCASE · FCH-Blau',    section: 'display' },
+    { token: 'h2',      family: 'Factoria-Bold', size: 50, weight: 700, lineHeight: 60, tracking: 0, usage: 'Abschnittsüberschrift · UPPERCASE · FCH-Blau', section: 'display' },
+    { token: 'h3',      family: 'Factoria-Bold', size: 38, weight: 700, lineHeight: 46, tracking: 0, usage: 'Unterabschnitt · UPPERCASE · FCH-Blau',       section: 'display' },
+    { token: 'h4',      family: 'Factoria-Bold', size: 30, weight: 700, lineHeight: 36, tracking: 0, usage: 'Karten-Titel · UPPERCASE · FCH-Blau',         section: 'display' },
+    { token: 'h5',      family: 'Factoria-Bold', size: 26, weight: 700, lineHeight: 32, tracking: 0, usage: 'Karten-Unterzeile · UPPERCASE · FCH-Blau',    section: 'display' },
+    { token: 'h6',      family: 'Factoria-Bold', size: 20, weight: 700, lineHeight: 28, tracking: 0, usage: 'Membership-Titel · kleine Sektionsköpfe',     section: 'display' },
+    { token: 'body-lg', family: 'noway-regular-webfont', size: 20, weight: 400, lineHeight: 28, tracking: 0, usage: 'Nav-Links · Button-Labels', section: 'body' },
+    { token: 'body-md', family: 'noway-regular-webfont', size: 16, weight: 400, lineHeight: 24, tracking: 0, usage: 'Standard-Fließtext',        section: 'body' },
+    { token: 'label-md',family: 'noway-regular-webfont', size: 14, weight: 400, lineHeight: 20, tracking: 0, usage: 'Sekundärer Text · Bildunterschriften', section: 'body' },
+    { token: 'caption', family: 'noway-regular-webfont', size: 13, weight: 400, lineHeight: 18, tracking: 0, usage: 'Metadaten · Zeitstempel',     section: 'body' },
   ],
 
   spacing: [
@@ -104,19 +104,60 @@ export const fchHansaRostockSystem: DesignSystem = {
   componentGroups: ['Buttons', 'Navigation', 'Badges & Labels', 'Cards', 'Form Controls'],
 
   components: [
-    // ── Shop-Button (Figma-Quelle: Components Page → "Button") ──────────────
-    // Solid, kein Pinsel-Hintergrund. Factoria Bold, 16px, kein Uppercase.
+    // ── Members-Page Buttons (Figma node 1569:1146) ──────────────────────────
+    // 48px · Factoria Bold · radius-none — vollständiges Button-System
     {
       name: 'button-primary',
       group: 'Buttons',
-      description: 'Shop-CTA — FCH-Blau, Factoria Bold 16px, kein Uppercase (Figma-spec)',
+      description: 'Primärer CTA — FCH-Blau, 48px, Factoria Bold 16px (Figma Members Page)',
       type: 'button',
-      height: 40, paddingX: 24, radiusValue: 0,
+      height: 48, paddingX: 14, radiusValue: 0,
       fontSize: 16, fontWeight: 700,
-      defaultContent: 'In den Warenkorb',
+      defaultContent: 'Jetzt Mitglied werden',
       variants: [
         { label: 'Default',  bg: '#0080C9', textColor: '#FFFFFF' },
-        { label: 'Hover',    bg: '#0070B0', textColor: '#FFFFFF' },
+        { label: 'Hover',    bg: '#006FA2', textColor: '#FFFFFF' },
+        { label: 'Disabled', bg: '#DDDDDD', textColor: '#8D8D8D', opacity: 0.4 },
+      ],
+    },
+    {
+      name: 'button-secondary',
+      group: 'Buttons',
+      description: 'Sekundärer CTA — Weiß mit FCH-Blau Rahmen, 48px, Factoria Bold 14px',
+      type: 'button',
+      height: 48, paddingX: 12, radiusValue: 0,
+      fontSize: 14, fontWeight: 700,
+      defaultContent: 'Mehr erfahren',
+      variants: [
+        { label: 'Default',  bg: '#FFFFFF', textColor: '#0080C9', border: '2px solid #0080C9' },
+        { label: 'Hover',    bg: '#FFFFFF', textColor: '#006FA2', border: '2px solid #006FA2' },
+        { label: 'Disabled', bg: '#FFFFFF', textColor: '#8D8D8D', border: '2px solid #DDDDDD', opacity: 0.4 },
+      ],
+    },
+    {
+      name: 'button-link',
+      group: 'Buttons',
+      description: 'Link-Button — FCH-Blau Unterstreichen-Rahmen, Factoria Bold 15px, kein Hintergrund',
+      type: 'button',
+      height: 23, paddingX: 0, radiusValue: 0,
+      fontSize: 15, fontWeight: 700,
+      defaultContent: 'Details ansehen',
+      variants: [
+        { label: 'Default',  bg: 'transparent', textColor: '#0080C9', border: '0 0 2px 0 solid #0080C9' },
+        { label: 'Hover',    bg: 'transparent', textColor: '#006FA2', border: '0 0 2px 0 solid #006FA2' },
+      ],
+    },
+    {
+      name: 'icon-button-primary',
+      group: 'Buttons',
+      description: 'Icon-CTA quadratisch — FCH-Blau, 46×46px, kein Radius',
+      type: 'button',
+      height: 46, paddingX: 0, radiusValue: 0,
+      fontSize: 0, fontWeight: 700,
+      defaultContent: '→',
+      variants: [
+        { label: 'Default',  bg: '#0080C9', textColor: '#FFFFFF' },
+        { label: 'Hover',    bg: '#006FA2', textColor: '#FFFFFF' },
         { label: 'Disabled', bg: '#DDDDDD', textColor: '#8D8D8D', opacity: 0.4 },
       ],
     },
