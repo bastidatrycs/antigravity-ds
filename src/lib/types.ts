@@ -51,6 +51,7 @@ export interface ComponentSpec {
   fontSize: number
   fontWeight: number
   fontFamily?: string
+  icon?: string
   defaultContent: string
   variants: ComponentVariant[]
   cardContent?: { heading: string; body: string }
@@ -70,6 +71,7 @@ export interface DesignSystem {
   spacing: SpacingToken[]
   radius: RadiusToken[]
   componentGroups: string[]
+  componentGroupDescriptions?: Record<string, string>
   components: ComponentSpec[]
   principles: {
     do: string[]

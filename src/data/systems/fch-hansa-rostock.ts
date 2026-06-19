@@ -103,9 +103,31 @@ export const fchHansaRostockSystem: DesignSystem = {
 
   componentGroups: ['Buttons', 'Navigation', 'Badges & Labels', 'Cards', 'Form Controls'],
 
+  componentGroupDescriptions: {
+    'Buttons': 'Das FCH-Button-System folgt einem kantigen Designprinzip — radius-none auf allen CTAs, Factoria-Bold als Schrift, FCH-Blau als primäre Akzentfarbe. Buttons gibt es in vier Varianten: Primary (gefüllt), Secondary (outlined), Link (Unterstrich) und Icon-Button (quadratisch). Jede Variante ist in Default, Hover und Disabled definiert.',
+    'Navigation': 'Header-Navigation auf FCH-Blau-Hintergrund. Factoria-Bold UPPERCASE, kein Radius.',
+    'Badges & Labels': 'Produktkachel-Labels im Shop — Factoria-Bold 13px, radius-none, farbkodiert nach Kategorie.',
+    'Cards': 'Teaser-, Spieltag- und Mitgliedschafts-Karten.',
+  },
+
   components: [
     // ── Buttons (Figma Members Page node 1569:1146) ──────────────────────────
-    // Factoria-Bold · radius-none · vollständiges System
+    {
+      name: 'button-primary-mit-icon',
+      group: 'Buttons',
+      description: 'Primärer CTA mit Icon links — FCH-Blau, 48px, Factoria Bold 16px, Icon 24×24px',
+      type: 'button',
+      height: 48, paddingX: 24, radiusValue: 0,
+      fontSize: 16, fontWeight: 700,
+      fontFamily: 'Factoria-Bold',
+      icon: 'wallet',
+      defaultContent: 'Zum Wallet Hinzufügen',
+      variants: [
+        { label: 'Default',  bg: '#0080C9', textColor: '#FFFFFF' },
+        { label: 'Hover',    bg: '#006FA2', textColor: '#FFFFFF' },
+        { label: 'Disabled', bg: '#CCCCCC', textColor: '#999999', opacity: 0.6 },
+      ],
+    },
     {
       name: 'button-primary',
       group: 'Buttons',
@@ -122,14 +144,30 @@ export const fchHansaRostockSystem: DesignSystem = {
       ],
     },
     {
-      name: 'button-secondary',
+      name: 'button-secondary-mit-icon',
       group: 'Buttons',
-      description: 'Sekundärer CTA — Weiß mit FCH-Blau Rahmen, 48px, Factoria Bold 14px',
+      description: 'Sekundärer CTA mit Icon — Outlined, 48px, Factoria Bold 16px, Icon 24×24px',
       type: 'button',
       height: 48, paddingX: 24, radiusValue: 0,
-      fontSize: 14, fontWeight: 700,
+      fontSize: 16, fontWeight: 700,
       fontFamily: 'Factoria-Bold',
-      defaultContent: 'Mehr erfahren',
+      icon: 'file-invoice',
+      defaultContent: 'Rechnungen & Sepa',
+      variants: [
+        { label: 'Default',  bg: '#FFFFFF', textColor: '#0080C9', border: '2px solid #0080C9' },
+        { label: 'Hover',    bg: '#FFFFFF', textColor: '#006FA2', border: '2px solid #006FA2' },
+        { label: 'Disabled', bg: '#FFFFFF', textColor: '#CCCCCC', border: '2px solid #CCCCCC', opacity: 0.6 },
+      ],
+    },
+    {
+      name: 'button-secondary',
+      group: 'Buttons',
+      description: 'Sekundärer CTA — Weiß mit FCH-Blau Rahmen, 48px, Factoria Bold 16px',
+      type: 'button',
+      height: 48, paddingX: 24, radiusValue: 0,
+      fontSize: 16, fontWeight: 700,
+      fontFamily: 'Factoria-Bold',
+      defaultContent: 'Rechnungen & Sepa',
       variants: [
         { label: 'Default',  bg: '#FFFFFF', textColor: '#0080C9', border: '2px solid #0080C9' },
         { label: 'Hover',    bg: '#FFFFFF', textColor: '#006FA2', border: '2px solid #006FA2' },
@@ -139,30 +177,48 @@ export const fchHansaRostockSystem: DesignSystem = {
     {
       name: 'button-link',
       group: 'Buttons',
-      description: 'Link-CTA — FCH-Blau, Factoria Bold 15px, nur Unterstrich-Rahmen',
+      description: 'Link-CTA — FCH-Blau, Factoria Bold 15px, Unterstrich-Rahmen',
       type: 'button',
       height: 23, paddingX: 0, radiusValue: 0,
       fontSize: 15, fontWeight: 700,
       fontFamily: 'Factoria-Bold',
-      defaultContent: 'Details ansehen',
+      defaultContent: 'Verlinkung',
       variants: [
-        { label: 'Default', bg: 'transparent', textColor: '#0080C9', borderBottom: '2px solid #0080C9' },
-        { label: 'Hover',   bg: 'transparent', textColor: '#006FA2', borderBottom: '2px solid #006FA2' },
+        { label: 'Default',  bg: 'transparent', textColor: '#0080C9', borderBottom: '2px solid #0080C9' },
+        { label: 'Hover',    bg: 'transparent', textColor: '#006FA2', borderBottom: '2px solid #006FA2' },
+        { label: 'Disabled', bg: 'transparent', textColor: '#CCCCCC', borderBottom: '2px solid #CCCCCC', opacity: 0.6 },
       ],
     },
     {
       name: 'icon-button-primary',
       group: 'Buttons',
-      description: 'Icon-CTA quadratisch — FCH-Blau, 46×46px, kein Radius',
+      description: 'Primärer Icon-Button — FCH-Blau, 46×46px, radius-none, Pfeil-Icon',
       type: 'button',
       height: 46, paddingX: 0, radiusValue: 0,
       fontSize: 0, fontWeight: 700,
       fontFamily: 'Factoria-Bold',
-      defaultContent: '→',
+      icon: 'arrow-right',
+      defaultContent: '',
       variants: [
         { label: 'Default',  bg: '#0080C9', textColor: '#FFFFFF' },
         { label: 'Hover',    bg: '#006FA2', textColor: '#FFFFFF' },
         { label: 'Disabled', bg: '#CCCCCC', textColor: '#999999', opacity: 0.6 },
+      ],
+    },
+    {
+      name: 'icon-button-secondary',
+      group: 'Buttons',
+      description: 'Sekundärer Icon-Button — Outlined, 46×46px, radius-none, Stift-Icon',
+      type: 'button',
+      height: 46, paddingX: 0, radiusValue: 0,
+      fontSize: 0, fontWeight: 700,
+      fontFamily: 'Factoria-Bold',
+      icon: 'pen-line',
+      defaultContent: '',
+      variants: [
+        { label: 'Default',  bg: '#FFFFFF', textColor: '#0080C9', border: '2px solid #0080C9' },
+        { label: 'Hover',    bg: '#FFFFFF', textColor: '#006FA2', border: '2px solid #006FA2' },
+        { label: 'Disabled', bg: '#FFFFFF', textColor: '#CCCCCC', border: '2px solid #CCCCCC', opacity: 0.6 },
       ],
     },
     {
