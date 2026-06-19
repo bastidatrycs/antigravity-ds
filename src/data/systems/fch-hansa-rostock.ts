@@ -140,7 +140,7 @@ export const fchHansaRostockSystem: DesignSystem = {
       variants: [
         { label: 'Default',  bg: '#0080C9', textColor: '#FFFFFF' },
         { label: 'Hover',    bg: '#006FA2', textColor: '#FFFFFF' },
-        { label: 'Disabled', bg: '#CCCCCC', textColor: '#999999', opacity: 0.6 },
+        { label: 'Disabled', bg: '#A6D3EC', textColor: '#FFFFFF' },
       ],
     },
     {
@@ -155,7 +155,7 @@ export const fchHansaRostockSystem: DesignSystem = {
       variants: [
         { label: 'Default',  bg: '#0080C9', textColor: '#FFFFFF' },
         { label: 'Hover',    bg: '#006FA2', textColor: '#FFFFFF' },
-        { label: 'Disabled', bg: '#CCCCCC', textColor: '#999999', opacity: 0.6 },
+        { label: 'Disabled', bg: '#A6D3EC', textColor: '#FFFFFF' },
       ],
     },
     {
@@ -171,7 +171,7 @@ export const fchHansaRostockSystem: DesignSystem = {
       variants: [
         { label: 'Default',  bg: '#FFFFFF', textColor: '#0080C9', border: '2px solid #0080C9' },
         { label: 'Hover',    bg: '#FFFFFF', textColor: '#006FA2', border: '2px solid #006FA2' },
-        { label: 'Disabled', bg: '#FFFFFF', textColor: '#CCCCCC', border: '2px solid #CCCCCC', opacity: 0.6 },
+        { label: 'Disabled', bg: '#FFFFFF', textColor: '#A6D3EC', border: '2px solid #A6D3EC' },
       ],
     },
     {
@@ -186,7 +186,7 @@ export const fchHansaRostockSystem: DesignSystem = {
       variants: [
         { label: 'Default',  bg: '#FFFFFF', textColor: '#0080C9', border: '2px solid #0080C9' },
         { label: 'Hover',    bg: '#FFFFFF', textColor: '#006FA2', border: '2px solid #006FA2' },
-        { label: 'Disabled', bg: '#FFFFFF', textColor: '#CCCCCC', border: '2px solid #CCCCCC', opacity: 0.6 },
+        { label: 'Disabled', bg: '#FFFFFF', textColor: '#A6D3EC', border: '2px solid #A6D3EC' },
       ],
     },
     {
@@ -201,7 +201,7 @@ export const fchHansaRostockSystem: DesignSystem = {
       variants: [
         { label: 'Default',  bg: 'transparent', textColor: '#0080C9', borderBottom: '2px solid #0080C9' },
         { label: 'Hover',    bg: 'transparent', textColor: '#006FA2', borderBottom: '2px solid #006FA2' },
-        { label: 'Disabled', bg: 'transparent', textColor: '#CCCCCC', borderBottom: '2px solid #CCCCCC', opacity: 0.6 },
+        { label: 'Disabled', bg: 'transparent', textColor: '#A6D3EC', borderBottom: '2px solid #A6D3EC' },
       ],
     },
     {
@@ -217,7 +217,7 @@ export const fchHansaRostockSystem: DesignSystem = {
       variants: [
         { label: 'Default',  bg: '#0080C9', textColor: '#FFFFFF' },
         { label: 'Hover',    bg: '#006FA2', textColor: '#FFFFFF' },
-        { label: 'Disabled', bg: '#CCCCCC', textColor: '#999999', opacity: 0.6 },
+        { label: 'Disabled', bg: '#A6D3EC', textColor: '#FFFFFF' },
       ],
     },
     {
@@ -233,7 +233,7 @@ export const fchHansaRostockSystem: DesignSystem = {
       variants: [
         { label: 'Default',  bg: '#FFFFFF', textColor: '#0080C9', border: '2px solid #0080C9' },
         { label: 'Hover',    bg: '#FFFFFF', textColor: '#006FA2', border: '2px solid #006FA2' },
-        { label: 'Disabled', bg: '#FFFFFF', textColor: '#CCCCCC', border: '2px solid #CCCCCC', opacity: 0.6 },
+        { label: 'Disabled', bg: '#FFFFFF', textColor: '#A6D3EC', border: '2px solid #A6D3EC' },
       ],
     },
     {
