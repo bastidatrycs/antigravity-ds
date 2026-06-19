@@ -38,13 +38,16 @@ export interface ComponentVariant {
   opacity?: number
   ringColor?: string
   content?: string
+  labelColor?: string   // overrides label text color (e.g. disabled)
+  iconColor?: string    // explicit icon color override
+  variantIcon?: string  // per-variant icon override (e.g. loader for loading state)
 }
 
 export interface ComponentSpec {
   name: string
   group: string
   description: string
-  type: 'button' | 'badge-set' | 'card' | 'input'
+  type: 'button' | 'badge-set' | 'card' | 'input' | 'custom'
   height: number
   paddingX: number
   radiusValue: number
@@ -55,6 +58,10 @@ export interface ComponentSpec {
   defaultContent: string
   variants: ComponentVariant[]
   cardContent?: { heading: string; body: string }
+  hasLabel?: boolean   // render a label row above the field
+  labelText?: string   // label string shown above the field
+  rightIcon?: string   // icon key for the right side of the field
+  customHtml?: string  // raw HTML snippet rendered directly — for product cards and complex components
 }
 
 export interface DesignSystem {
