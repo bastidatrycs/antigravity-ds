@@ -3,12 +3,12 @@ import { CopyButton } from './CopyButton'
 
 const DEMO_TEXTS: Record<string, string> = {
   'display':    '87 · Hero Score',
-  'h1': 'Willkommen bei Hansa',
-  'h2': 'News & Aktuelles',
-  'h3': 'Spieltagsvorschau',
-  'h4': 'Karten-Titel',
-  'h5': 'Karten-Unterzeile',
-  'h6': 'Abschnitt',
+  'h1': 'Welcome to Hansa',
+  'h2': 'News & Updates',
+  'h3': 'Match Preview',
+  'h4': 'Card Title',
+  'h5': 'Card Subtitle',
+  'h6': 'Section',
   'display-xl': 'The quick brown fox',
   'display-lg': 'Product development',
   'display-md': 'Section Header',
@@ -19,9 +19,9 @@ const DEMO_TEXTS: Record<string, string> = {
   'body-lg':  'Default body — readable at all sizes on dark and light surfaces',
   'body-md':  'Purpose-built for fans and members alike — designed to inform.',
   'label-lg': 'Label · Badge · Tag',
-  'label-md': 'UI Label · Aktiv · Nav-Item',
-  'label-sm': 'Sekundäres Label · Footer-Link',
-  'caption':  'Metadaten · Zeitstempel · Bildunterschrift',
+  'label-md': 'UI Label · Active · Nav Item',
+  'label-sm': 'Secondary Label · Footer Link',
+  'caption':  'Metadata · Timestamp · Caption',
 }
 
 const GROUP_LABELS: Record<string, string> = {
@@ -91,7 +91,7 @@ export function Typography({ system }: { system: DesignSystem }) {
                       letterSpacing: t.tracking ? `${t.tracking}px` : undefined,
                       lineHeight: `${t.lineHeight}px`,
                       color: isDisplay && headingColor ? headingColor : '#111111',
-                      textTransform: isDisplay && headingColor ? 'uppercase' : 'none',
+                      textTransform: 'none',
                     }}
                   >
                     {DEMO_TEXTS[t.token] ?? t.usage}
