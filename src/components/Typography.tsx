@@ -1,6 +1,28 @@
 import { DesignSystem } from '@/lib/types'
 import { CopyButton } from './CopyButton'
 
+const SW_TYPO_VAR: Record<string, string> = {
+  'display':    '$font-size-display',
+  'h1':         '$h1-font-size',
+  'h2':         '$h2-font-size',
+  'h3':         '$h3-font-size',
+  'h4':         '$h4-font-size',
+  'h5':         '$h5-font-size',
+  'h6':         '$h6-font-size',
+  'display-xl': '$h1-font-size',
+  'display-lg': '$h2-font-size',
+  'display-md': '$h3-font-size',
+  'display-sm': '$h4-font-size',
+  'title-lg':   '$h5-font-size',
+  'title-md':   '$h6-font-size',
+  'body-md':    '$font-size-base',
+  'body-lg':    '$font-size-lg',
+  'title-sm':   '$font-size-lg',
+  'label-md':   '$font-size-sm',
+  'label-sm':   '$font-size-sm',
+  'caption':    '$font-size-sm',
+}
+
 const DEMO_TEXTS: Record<string, string> = {
   'display':    '87 · Hero Score',
   'h1': 'Welcome to Hansa',
@@ -78,7 +100,10 @@ export function Typography({ system }: { system: DesignSystem }) {
                         {' · '}{t.usage}
                       </div>
                     </div>
-                    <CopyButton value={`--${t.token}`} label={`--${t.token}`} />
+                    {system.platform === 'shopware'
+                      ? <CopyButton value={SW_TYPO_VAR[t.token] ?? `--${t.token}`} label={SW_TYPO_VAR[t.token] ?? `--${t.token}`} />
+                      : <CopyButton value={`--${t.token}`} label={`--${t.token}`} />
+                    }
                   </div>
 
                   {/* Text sample */}
