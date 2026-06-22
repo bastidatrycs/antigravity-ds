@@ -1,0 +1,101 @@
+{
+  "_meta": {
+    "version": "1.1",
+    "description": "Shopware 6 Storefront variable mapping for the datrycs-ds-to-figma skill. Maps design token names to the correct Shopware SCSS variable names as defined in theme.json and _theme.scss / _bootstrap.scss. Used by Claude to generate proper _variables.scss overrides for Shopware child themes.",
+    "sources": [
+      "https://github.com/shopware/shopware/blob/trunk/src/Storefront/Resources/theme.json",
+      "https://github.com/shopware/shopware/blob/trunk/src/Storefront/Resources/app/storefront/src/scss/skin/shopware/abstract/variables/_theme.scss",
+      "https://github.com/shopware/shopware/blob/trunk/src/Storefront/Resources/app/storefront/src/scss/skin/shopware/abstract/variables/_bootstrap.scss"
+    ],
+    "outputFile": "_variables.scss",
+    "outputNote": "In Shopware child themes, this file is included before Bootstrap so that all $sw-* and Bootstrap variables cascade correctly. It must NOT import Bootstrap itself."
+  },
+
+  "colorMapping": {
+    "_comment": "Maps design token roles to Shopware SCSS variable names. All $sw-* vars are picked up by theme.json and are visible in the Shopware Administration theme editor.",
+    "brand-primary":     "$sw-color-brand-primary",
+    "brand-secondary":   "$sw-color-brand-secondary",
+    "surface-default":   "$sw-background-color",
+    "text-primary":      "$sw-text-color",
+    "text-heading":      "$sw-headline-color",
+    "border-default":    "$sw-border-color",
+    "semantic-success":  "$sw-color-success",
+    "semantic-info":     "$sw-color-info",
+    "semantic-warning":  "$sw-color-warning",
+    "semantic-error":    "$sw-color-danger",
+    "price":             "$sw-color-price",
+    "buy-button-bg":     "$sw-color-buy-button",
+    "buy-button-text":   "$sw-color-buy-button-text"
+  },
+
+  "typographyMapping": {
+    "_comment": "Typography vars — $sw-font-family-* flow into Bootstrap's $font-family-base and $headings-font-family.",
+    "font-family-base":     "$sw-font-family-base",
+    "font-family-headline": "$sw-font-family-headline"
+  },
+
+  "bootstrapOverrides": {
+    "_comment": "These are pure Bootstrap 5 variables that Shopware's _bootstrap.scss sets. Override them after the $sw-* vars so they inherit correctly.",
+    "h1-font-size":          "$h1-font-size",
+    "h2-font-size":          "$h2-font-size",
+    "h3-font-size":          "$h3-font-size",
+    "h4-font-size":          "$h4-font-size",
+    "h5-font-size":          "$h5-font-size",
+    "h6-font-size":          "$h6-font-size",
+    "font-size-base":        "$font-size-base",
+    "font-size-lg":          "$font-size-lg",
+    "font-size-sm":          "$font-size-sm",
+    "font-weight-normal":    "$font-weight-normal",
+    "font-weight-bold":      "$font-weight-bold",
+    "headings-font-weight":  "$headings-font-weight",
+    "line-height-base":      "$line-height-base",
+    "btn-padding-y":         "$btn-padding-y",
+    "btn-padding-x":         "$btn-padding-x",
+    "btn-font-weight":       "$btn-font-weight",
+    "btn-line-height":       "$btn-line-height",
+    "input-padding-y":       "$input-padding-y",
+    "input-padding-x":       "$input-padding-x",
+    "border-radius":         "$border-radius",
+    "border-radius-lg":      "$border-radius-lg",
+    "border-radius-sm":      "$border-radius-sm"
+  },
+
+  "themeJsonFields": {
+    "_comment": "These are the exact field names from theme.json — the ones that appear in the Shopware Administration. Their SCSS counterparts are listed above.",
+    "sw-color-brand-primary":    { "scss": "$sw-color-brand-primary",   "defaultValue": "#0042a0", "block": "themeColors" },
+    "sw-color-brand-secondary":  { "scss": "$sw-color-brand-secondary", "defaultValue": "#474a57", "block": "themeColors" },
+    "sw-border-color":           { "scss": "$sw-border-color",          "defaultValue": "#798490", "block": "themeColors" },
+    "sw-background-color":       { "scss": "$sw-background-color",      "defaultValue": "#fff",    "block": "themeColors" },
+    "sw-color-success":          { "scss": "$sw-color-success",         "defaultValue": "#007e4e", "block": "statusColors" },
+    "sw-color-info":             { "scss": "$sw-color-info",            "defaultValue": "#005b99", "block": "statusColors" },
+    "sw-color-warning":          { "scss": "$sw-color-warning",         "defaultValue": "#974200", "block": "statusColors" },
+    "sw-color-danger":           { "scss": "$sw-color-danger",          "defaultValue": "#c20017", "block": "statusColors" },
+    "sw-font-family-base":       { "scss": "$sw-font-family-base",      "defaultValue": "'Inter', sans-serif", "block": "typography" },
+    "sw-text-color":             { "scss": "$sw-text-color",            "defaultValue": "#2b3136", "block": "typography" },
+    "sw-font-family-headline":   { "scss": "$sw-font-family-headline",  "defaultValue": "'Inter', sans-serif", "block": "typography" },
+    "sw-headline-color":         { "scss": "$sw-headline-color",        "defaultValue": "#2b3136", "block": "typography" },
+    "sw-color-price":            { "scss": "$sw-color-price",           "defaultValue": "#2b3136", "block": "eCommerce" },
+    "sw-color-buy-button":       { "scss": "$sw-color-buy-button",      "defaultValue": "#0042a0", "block": "eCommerce" },
+    "sw-color-buy-button-text":  { "scss": "$sw-color-buy-button-text", "defaultValue": "#fff",    "block": "eCommerce" }
+  },
+
+  "outputTemplate": {
+    "_comment": "Use this template structure for the generated _variables.scss. Section order matters: sw-* vars must come first so Bootstrap vars can reference them.",
+    "sections": [
+      {
+        "title": "Shopware theme variables (sw-*)",
+        "note": "Picked up by theme.json and visible in Shopware Administration. Must use !default so child themes can override.",
+        "vars": ["sw-color-brand-primary", "sw-color-brand-secondary", "sw-background-color", "sw-text-color", "sw-headline-color", "sw-border-color", "sw-color-success", "sw-color-info", "sw-color-warning", "sw-color-danger", "sw-color-price", "sw-color-buy-button", "sw-color-buy-button-text", "sw-font-family-base", "sw-font-family-headline"]
+      },
+      {
+        "title": "Bootstrap 5 overrides",
+        "note": "Pure Bootstrap vars — set after sw-* vars so they can reference them (e.g. $primary: $sw-color-brand-primary). Must use !default.",
+        "vars": ["h1-font-size", "h2-font-size", "h3-font-size", "h4-font-size", "h5-font-size", "h6-font-size", "font-size-base", "font-weight-normal", "headings-font-weight", "line-height-base", "btn-padding-y", "btn-padding-x", "btn-font-weight", "btn-line-height", "border-radius", "border-radius-lg", "border-radius-sm"]
+      }
+    ]
+  },
+
+  "fontFaceNote": "Place @font-face declarations in a separate _fonts.scss that is imported BEFORE _variables.scss in your theme's main SCSS entry point. This ensures the font-family name resolves when $sw-font-family-base references it.",
+
+  "themeJsonNote": "To make sw-* variables editable in Shopware Administration, add them to your child theme's theme.json under config.fields with type: 'color' or 'fontFamily'. Child theme values override parent (Shopware default) values."
+}
