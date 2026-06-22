@@ -7,8 +7,8 @@
       "https://github.com/shopware/shopware/blob/trunk/src/Storefront/Resources/app/storefront/src/scss/skin/shopware/abstract/variables/_theme.scss",
       "https://github.com/shopware/shopware/blob/trunk/src/Storefront/Resources/app/storefront/src/scss/skin/shopware/abstract/variables/_bootstrap.scss"
     ],
-    "outputFile": "_variables.scss",
-    "outputNote": "In Shopware child themes, this file is included before Bootstrap so that all $sw-* and Bootstrap variables cascade correctly. It must NOT import Bootstrap itself."
+    "outputFiles": ["_variables.scss", "theme-fields.json"],
+    "outputNote": "TWO files are generated for Shopware projects: (1) theme-fields.json — paste into theme.json config.fields to set $sw-* vars via Shopware Administration; (2) _variables.scss — only Bootstrap overrides that are NOT in theme.json (heading sizes, font-size-base, etc.). If using _variables.scss for $sw-* vars directly (plugin context without theme.json), load it BEFORE Shopware's variables.scss and do NOT use !default — Shopware's _theme.scss already sets $sw-* with !default, so !default would make your values get ignored."
   },
 
   "colorMapping": {
@@ -84,12 +84,12 @@
     "sections": [
       {
         "title": "Shopware theme variables (sw-*)",
-        "note": "Picked up by theme.json and visible in Shopware Administration. Must use !default so child themes can override.",
+        "note": "These values go in theme.json config.fields — NOT in _variables.scss. Shopware compiles them into $sw-* SCSS variables BEFORE _theme.scss runs. If you put them in SCSS instead, do NOT use !default (Shopware's _theme.scss already sets them with !default, so !default on your values means yours get ignored).",
         "vars": ["sw-color-brand-primary", "sw-color-brand-secondary", "sw-background-color", "sw-text-color", "sw-headline-color", "sw-border-color", "sw-color-success", "sw-color-info", "sw-color-warning", "sw-color-danger", "sw-color-price", "sw-color-buy-button", "sw-color-buy-button-text", "sw-font-family-base", "sw-font-family-headline"]
       },
       {
         "title": "Bootstrap 5 overrides",
-        "note": "Pure Bootstrap vars — set after sw-* vars so they can reference them (e.g. $primary: $sw-color-brand-primary). Must use !default.",
+        "note": "Bootstrap vars NOT covered by theme.json (heading sizes, font-size-base, border-radius, btn padding). These go in _variables.scss WITHOUT !default — Shopware's _bootstrap.scss already sets them with !default, so omitting !default here ensures your values take precedence.",
         "vars": ["h1-font-size", "h2-font-size", "h3-font-size", "h4-font-size", "h5-font-size", "h6-font-size", "font-size-base", "font-weight-normal", "headings-font-weight", "line-height-base", "btn-padding-y", "btn-padding-x", "btn-font-weight", "btn-line-height", "border-radius", "border-radius-lg", "border-radius-sm"]
       }
     ]
