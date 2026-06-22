@@ -69,6 +69,7 @@ export interface DesignSystem {
   name: string
   description: string
   source: string
+  platform?: 'shopware' | 'shopify' | 'headless'
   figmaFile?: string
   fontFaces?: string
   logo?: string

@@ -6,6 +6,7 @@ export const minimumSystem: DesignSystem = {
   description:
     'Ultra-minimalistischer Möbel- und Design-Onlineshop — reine Schwarz-Weiß-Identität, null border-radius, Outfit-Variable-Font und warme Off-White-Akzentflächen.',
   source: 'https://www.minimum.de/',
+  platform: 'shopware',
   extractedAt: '2026-06-19',
 
   fontFaces: `
