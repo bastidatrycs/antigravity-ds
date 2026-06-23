@@ -245,7 +245,7 @@ export const fchHansaRostockSystem: DesignSystem = {
       defaultContent: 'New',
       variants: [
         { label: 'New',    bg: '#007E54', textColor: '#FFFFFF', content: 'New' },
-        { label: 'Sale',   bg: '#0080C9', textColor: '#FFFFFF', content: '%' },
+        { label: 'Sale',   bg: '#E52721', textColor: '#FFFFFF', content: '%' },
         { label: 'Tip',    bg: '#0080C9', textColor: '#FFFFFF', content: 'Tip' },
         { label: 'Women',  bg: '#143A77', textColor: '#FFFFFF', content: 'Women' },
         { label: 'Kids',   bg: '#143A77', textColor: '#FFFFFF', content: 'Kids' },

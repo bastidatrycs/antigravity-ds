@@ -346,6 +346,7 @@ function BadgeGroupCard({
                 height: comp.height,
                 paddingLeft: comp.paddingX,
                 paddingRight: comp.paddingX,
+                paddingBottom: 2,
                 borderRadius: comp.radiusValue,
                 backgroundColor: v.bg,
                 color: v.textColor,
