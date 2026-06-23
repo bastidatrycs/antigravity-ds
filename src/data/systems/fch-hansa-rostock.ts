@@ -241,7 +241,7 @@ export const fchHansaRostockSystem: DesignSystem = {
       description: 'Product tile label — Factoria Bold 13px, radius-none',
       type: 'badge-set',
       height: 23, paddingX: 6, radiusValue: 0,
-      fontSize: 13, fontWeight: 700,
+      fontSize: 13, fontWeight: 700, fontFamily: 'Factoria-Bold',
       defaultContent: 'New',
       variants: [
         { label: 'New',    bg: '#007E54', textColor: '#FFFFFF', content: 'New' },
