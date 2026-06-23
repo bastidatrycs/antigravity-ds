@@ -3,7 +3,7 @@ import { DesignSystem } from '@/lib/types'
 export const fchHansaRostockSystem: DesignSystem = {
   id: 'fch-hansa-rostock',
   name: 'F.C. Hansa Rostock',
-  description: 'FCH-Blau as the dominant brand color, Factoria-Bold in uppercase, and sharp-edged buttons — strong, North German, unsinkable since 1965.',
+  description: 'FCH-Rot as the dominant brand color, Factoria-Bold in uppercase, and sharp-edged buttons — strong, North German, unsinkable since 1965.',
   source: 'https://www.fch.de/',
   platform: 'shopware',
   logo: '/logos/hansa.svg',
@@ -46,21 +46,21 @@ export const fchHansaRostockSystem: DesignSystem = {
   colorGroups: ['Brand', 'Surface', 'Border', 'Text', 'Semantic'],
 
   colorGroupDescriptions: {
-    'Brand':    'FCH-Blau (#0080C9) as the dominant brand color — headers, headings, and primary CTAs. Navy (#143A77) as a dark depth accent in headers and gradients. Club Red (#9E0101) for specific hero moments.',
+    'Brand':    'FCH-Rot (#E52721) as the dominant brand color — headers, headings, and primary CTAs. Navy (#143A77) as a dark depth accent in headers and gradients. Club Red (#9E0101) for specific hero moments.',
     'Surface':  'White as the page and card background, light grey (#EFEFEF) for teaser boxes, black (85% opacity) for modal overlays.',
     'Border':   'Subtle dividers — default #DDDDDD, lighter #EFEFEF for barely visible borders.',
-    'Text':     'Dark grey (#333333) for body text, mid-grey (#8D8D8D) for metadata. FCH-Blau as the link color.',
+    'Text':     'Dark grey (#333333) for body text, mid-grey (#8D8D8D) for metadata. FCH-Rot as the link color.',
     'Semantic': 'Green for positive actions, red for errors and destructive actions, orange for warning states.',
   },
 
   typographyGroupDescriptions: {
-    display: 'Factoria-Bold in uppercase, always in FCH-Blau (#0080C9). From the hero number (87px) down to the smallest sub-heading h6 (20px). All heading sizes match Bootstrap 5 h1–h6.',
+    display: 'Factoria-Bold in uppercase, always in FCH-Rot (#E52721). From the hero number (87px) down to the smallest sub-heading h6 (20px). All heading sizes match Bootstrap 5 h1–h6.',
     body: 'noway-regular-webfont for all body copy, nav links, and labels. Readable, clear, and matter-of-fact — no uppercase, no Factoria.',
   },
 
   colors: [
     // Brand
-    { token: 'brand-primary',   display: 'primary',   hex: '#0080C9', role: 'FCH-Blau · Header · H1/H2 · Primary CTAs',  group: 'Brand' },
+    { token: 'brand-primary',   display: 'primary',   hex: '#E52721', role: 'FCH-Rot · Header · H1/H2 · Primary CTAs',  group: 'Brand' },
     { token: 'brand-navy',      display: 'navy',      hex: '#143A77', role: 'Dark Navy · Gradient Accent',                group: 'Brand' },
     { token: 'brand-red',       display: 'red',       hex: '#9E0101', role: 'Club Red · Red Button Variant',              group: 'Brand' },
     // Surface
@@ -76,7 +76,7 @@ export const fchHansaRostockSystem: DesignSystem = {
     { token: 'text-secondary',  display: 'secondary', hex: '#8D8D8D', role: 'Muted · Supporting Text · Metadata',         group: 'Text' },
     { token: 'text-muted',      display: 'muted',     hex: '#8D8D8D', role: 'De-emphasized · Timestamps',                 group: 'Text' },
     { token: 'text-inverse',    display: 'inverse',   hex: '#FFFFFF', role: 'Text on Blue / Dark Surfaces',               group: 'Text' },
-    { token: 'text-link',       display: 'link',      hex: '#0080C9', role: 'Interactive Links',                          group: 'Text' },
+    { token: 'text-link',       display: 'link',      hex: '#E52721', role: 'Interactive Links',                          group: 'Text' },
     // Semantic
     { token: 'semantic-success', display: 'success',  hex: '#2D7A2D', role: 'Positive States',                            group: 'Semantic' },
     { token: 'semantic-error',   display: 'error',    hex: '#9E0101', role: 'Errors · Destructive Actions',               group: 'Semantic' },
@@ -85,11 +85,11 @@ export const fchHansaRostockSystem: DesignSystem = {
 
   typography: [
     { token: 'display', family: 'Factoria-Bold', size: 87, weight: 700, lineHeight: 87, tracking: 0, usage: 'Hero score · oversized numbers · display-1', section: 'display' },
-    { token: 'h1',      family: 'Factoria-Bold', size: 60, weight: 700, lineHeight: 72, tracking: 0, usage: 'Main heading · UPPERCASE · FCH-Blau',          section: 'display' },
-    { token: 'h2',      family: 'Factoria-Bold', size: 50, weight: 700, lineHeight: 60, tracking: 0, usage: 'Section heading · UPPERCASE · FCH-Blau',        section: 'display' },
-    { token: 'h3',      family: 'Factoria-Bold', size: 38, weight: 700, lineHeight: 46, tracking: 0, usage: 'Sub-section · UPPERCASE · FCH-Blau',            section: 'display' },
-    { token: 'h4',      family: 'Factoria-Bold', size: 30, weight: 700, lineHeight: 36, tracking: 0, usage: 'Card title · UPPERCASE · FCH-Blau',             section: 'display' },
-    { token: 'h5',      family: 'Factoria-Bold', size: 26, weight: 700, lineHeight: 32, tracking: 0, usage: 'Card subtitle · UPPERCASE · FCH-Blau',          section: 'display' },
+    { token: 'h1',      family: 'Factoria-Bold', size: 60, weight: 700, lineHeight: 72, tracking: 0, usage: 'Main heading · UPPERCASE · FCH-Rot',          section: 'display' },
+    { token: 'h2',      family: 'Factoria-Bold', size: 50, weight: 700, lineHeight: 60, tracking: 0, usage: 'Section heading · UPPERCASE · FCH-Rot',        section: 'display' },
+    { token: 'h3',      family: 'Factoria-Bold', size: 38, weight: 700, lineHeight: 46, tracking: 0, usage: 'Sub-section · UPPERCASE · FCH-Rot',            section: 'display' },
+    { token: 'h4',      family: 'Factoria-Bold', size: 30, weight: 700, lineHeight: 36, tracking: 0, usage: 'Card title · UPPERCASE · FCH-Rot',             section: 'display' },
+    { token: 'h5',      family: 'Factoria-Bold', size: 26, weight: 700, lineHeight: 32, tracking: 0, usage: 'Card subtitle · UPPERCASE · FCH-Rot',          section: 'display' },
     { token: 'h6',      family: 'Factoria-Bold', size: 20, weight: 700, lineHeight: 28, tracking: 0, usage: 'Membership title · small section heads',        section: 'display' },
     { token: 'body-lg', family: 'noway-regular-webfont', size: 20, weight: 400, lineHeight: 28, tracking: 0, usage: 'Nav links · button labels', section: 'body' },
     { token: 'body-md', family: 'noway-regular-webfont', size: 16, weight: 400, lineHeight: 24, tracking: 0, usage: 'Default body copy',         section: 'body' },
@@ -120,16 +120,16 @@ export const fchHansaRostockSystem: DesignSystem = {
   componentGroups: ['Buttons', 'Badges & Labels', 'Form Controls'],
 
   componentGroupDescriptions: {
-    'Buttons': 'The FCH button system follows a sharp design principle — radius-none on all CTAs, Factoria-Bold as the typeface, FCH-Blau as the primary accent color. Buttons come in four variants: Primary (filled), Secondary (outlined), Link (underline), and Icon Button (square). Each variant is defined in Default, Hover, and Disabled states.',
+    'Buttons': 'The FCH button system follows a sharp design principle — radius-none on all CTAs, Factoria-Bold as the typeface, FCH-Rot as the primary accent color. Buttons come in four variants: Primary (filled), Secondary (outlined), Link (underline), and Icon Button (square). Each variant is defined in Default, Hover, and Disabled states.',
     'Badges & Labels': 'Product tile labels in the shop — Factoria-Bold 13px, radius-none, color-coded by category.',
-    'Form Controls': 'All form fields follow the same base pattern: 54px height, 2px border, 14px horizontal padding, radius-none. Border color signals state — default #E1E7EE, focused FCH-Blau, error red. Disabled fields use a grey background (#F5F5F5) and muted text.',
+    'Form Controls': 'All form fields follow the same base pattern: 54px height, 2px border, 14px horizontal padding, radius-none. Border color signals state — default #E1E7EE, focused FCH-Rot, error red. Disabled fields use a grey background (#F5F5F5) and muted text.',
   },
 
   components: [
     {
       name: 'button-primary-with-icon',
       group: 'Buttons',
-      description: 'Primary CTA with icon left — FCH-Blau, 48px, Factoria Bold 16px, icon 24×24px',
+      description: 'Primary CTA with icon left — FCH-Rot, 48px, Factoria Bold 16px, icon 24×24px',
       type: 'button',
       height: 48, paddingX: 24, radiusValue: 0,
       fontSize: 16, fontWeight: 700,
@@ -137,7 +137,7 @@ export const fchHansaRostockSystem: DesignSystem = {
       icon: 'wallet',
       defaultContent: 'Add to Wallet',
       variants: [
-        { label: 'Default',  bg: '#0080C9', textColor: '#FFFFFF' },
+        { label: 'Default',  bg: '#E52721', textColor: '#FFFFFF' },
         { label: 'Hover',    bg: '#006FA2', textColor: '#FFFFFF' },
         { label: 'Disabled', bg: '#A6D3EC', textColor: '#FFFFFF' },
       ],
@@ -145,14 +145,14 @@ export const fchHansaRostockSystem: DesignSystem = {
     {
       name: 'button-primary',
       group: 'Buttons',
-      description: 'Primary CTA — FCH-Blau, 48px, Factoria Bold 16px',
+      description: 'Primary CTA — FCH-Rot, 48px, Factoria Bold 16px',
       type: 'button',
       height: 48, paddingX: 24, radiusValue: 0,
       fontSize: 16, fontWeight: 700,
       fontFamily: 'Factoria-Bold',
       defaultContent: 'Become a Member',
       variants: [
-        { label: 'Default',  bg: '#0080C9', textColor: '#FFFFFF' },
+        { label: 'Default',  bg: '#E52721', textColor: '#FFFFFF' },
         { label: 'Hover',    bg: '#006FA2', textColor: '#FFFFFF' },
         { label: 'Disabled', bg: '#A6D3EC', textColor: '#FFFFFF' },
       ],
@@ -168,7 +168,7 @@ export const fchHansaRostockSystem: DesignSystem = {
       icon: 'file-invoice',
       defaultContent: 'Invoices & SEPA',
       variants: [
-        { label: 'Default',  bg: '#FFFFFF', textColor: '#0080C9', border: '2px solid #0080C9' },
+        { label: 'Default',  bg: '#FFFFFF', textColor: '#E52721', border: '2px solid #E52721' },
         { label: 'Hover',    bg: '#FFFFFF', textColor: '#006FA2', border: '2px solid #006FA2' },
         { label: 'Disabled', bg: '#FFFFFF', textColor: '#A6D3EC', border: '2px solid #A6D3EC' },
       ],
@@ -176,14 +176,14 @@ export const fchHansaRostockSystem: DesignSystem = {
     {
       name: 'button-secondary',
       group: 'Buttons',
-      description: 'Secondary CTA — white with FCH-Blau border, 48px, Factoria Bold 16px',
+      description: 'Secondary CTA — white with FCH-Rot border, 48px, Factoria Bold 16px',
       type: 'button',
       height: 48, paddingX: 24, radiusValue: 0,
       fontSize: 16, fontWeight: 700,
       fontFamily: 'Factoria-Bold',
       defaultContent: 'Invoices & SEPA',
       variants: [
-        { label: 'Default',  bg: '#FFFFFF', textColor: '#0080C9', border: '2px solid #0080C9' },
+        { label: 'Default',  bg: '#FFFFFF', textColor: '#E52721', border: '2px solid #E52721' },
         { label: 'Hover',    bg: '#FFFFFF', textColor: '#006FA2', border: '2px solid #006FA2' },
         { label: 'Disabled', bg: '#FFFFFF', textColor: '#A6D3EC', border: '2px solid #A6D3EC' },
       ],
@@ -191,14 +191,14 @@ export const fchHansaRostockSystem: DesignSystem = {
     {
       name: 'button-link',
       group: 'Buttons',
-      description: 'Link CTA — FCH-Blau, Factoria Bold 15px, underline border',
+      description: 'Link CTA — FCH-Rot, Factoria Bold 15px, underline border',
       type: 'button',
       height: 23, paddingX: 0, radiusValue: 0,
       fontSize: 15, fontWeight: 700,
       fontFamily: 'Factoria-Bold',
       defaultContent: 'Link Text',
       variants: [
-        { label: 'Default',  bg: 'transparent', textColor: '#0080C9', borderBottom: '2px solid #0080C9' },
+        { label: 'Default',  bg: 'transparent', textColor: '#E52721', borderBottom: '2px solid #E52721' },
         { label: 'Hover',    bg: 'transparent', textColor: '#006FA2', borderBottom: '2px solid #006FA2' },
         { label: 'Disabled', bg: 'transparent', textColor: '#A6D3EC', borderBottom: '2px solid #A6D3EC' },
       ],
@@ -206,7 +206,7 @@ export const fchHansaRostockSystem: DesignSystem = {
     {
       name: 'icon-button-primary',
       group: 'Buttons',
-      description: 'Primary icon button — FCH-Blau, 46×46px, radius-none, arrow icon',
+      description: 'Primary icon button — FCH-Rot, 46×46px, radius-none, arrow icon',
       type: 'button',
       height: 46, paddingX: 0, radiusValue: 0,
       fontSize: 0, fontWeight: 700,
@@ -214,7 +214,7 @@ export const fchHansaRostockSystem: DesignSystem = {
       icon: 'arrow-right',
       defaultContent: '',
       variants: [
-        { label: 'Default',  bg: '#0080C9', textColor: '#FFFFFF' },
+        { label: 'Default',  bg: '#E52721', textColor: '#FFFFFF' },
         { label: 'Hover',    bg: '#006FA2', textColor: '#FFFFFF' },
         { label: 'Disabled', bg: '#A6D3EC', textColor: '#FFFFFF' },
       ],
@@ -230,7 +230,7 @@ export const fchHansaRostockSystem: DesignSystem = {
       icon: 'pen-line',
       defaultContent: '',
       variants: [
-        { label: 'Default',  bg: '#FFFFFF', textColor: '#0080C9', border: '2px solid #0080C9' },
+        { label: 'Default',  bg: '#FFFFFF', textColor: '#E52721', border: '2px solid #E52721' },
         { label: 'Hover',    bg: '#FFFFFF', textColor: '#006FA2', border: '2px solid #006FA2' },
         { label: 'Disabled', bg: '#FFFFFF', textColor: '#A6D3EC', border: '2px solid #A6D3EC' },
       ],
@@ -246,7 +246,7 @@ export const fchHansaRostockSystem: DesignSystem = {
       variants: [
         { label: 'New',    bg: '#007E54', textColor: '#FFFFFF', content: 'New' },
         { label: 'Sale',   bg: '#E52721', textColor: '#FFFFFF', content: '%' },
-        { label: 'Tip',    bg: '#0080C9', textColor: '#FFFFFF', content: 'Tip' },
+        { label: 'Tip',    bg: '#E52721', textColor: '#FFFFFF', content: 'Tip' },
         { label: 'Women',  bg: '#143A77', textColor: '#FFFFFF', content: 'Women' },
         { label: 'Kids',   bg: '#143A77', textColor: '#FFFFFF', content: 'Kids' },
         { label: 'Men',    bg: '#143A77', textColor: '#FFFFFF', content: 'Men' },
@@ -265,8 +265,8 @@ export const fchHansaRostockSystem: DesignSystem = {
       defaultContent: 'Select an option...',
       variants: [
         { label: 'Default',  bg: '#FFFFFF', textColor: '#333333', border: '2px solid #E1E7EE' },
-        { label: 'Focused',  bg: '#FFFFFF', textColor: '#333333', border: '2px solid #0080C9' },
-        { label: 'Filled',   bg: '#E6F6FF', textColor: '#111111', border: '2px solid #0080C9', content: 'Option selected' },
+        { label: 'Focused',  bg: '#FFFFFF', textColor: '#333333', border: '2px solid #E52721' },
+        { label: 'Filled',   bg: '#FDEAEA', textColor: '#111111', border: '2px solid #E52721', content: 'Option selected' },
         { label: 'Disabled', bg: '#F5F5F5', textColor: '#A1A1AB', border: '2px solid #E1E7EE', labelColor: '#A1A1AB', iconColor: '#A1A1AB' },
         { label: 'Error',    bg: '#FFFFFF', textColor: '#333333', border: '2px solid #E02020' },
       ],
@@ -284,9 +284,9 @@ export const fchHansaRostockSystem: DesignSystem = {
       defaultContent: 'Enter search term...',
       variants: [
         { label: 'Default',  bg: '#FFFFFF', textColor: '#333333', border: '2px solid #E1E7EE' },
-        { label: 'Focused',  bg: '#FFFFFF', textColor: '#333333', border: '2px solid #0080C9' },
-        { label: 'Filled',   bg: '#E6F6FF', textColor: '#111111', border: '2px solid #0080C9', content: 'FC Hansa Rostock' },
-        { label: 'Loading',  bg: '#FFFFFF', textColor: '#8D8D8D', border: '2px solid #E1E7EE', variantIcon: 'loader', iconColor: '#0080C9' },
+        { label: 'Focused',  bg: '#FFFFFF', textColor: '#333333', border: '2px solid #E52721' },
+        { label: 'Filled',   bg: '#FDEAEA', textColor: '#111111', border: '2px solid #E52721', content: 'FC Hansa Rostock' },
+        { label: 'Loading',  bg: '#FFFFFF', textColor: '#8D8D8D', border: '2px solid #E1E7EE', variantIcon: 'loader', iconColor: '#E52721' },
         { label: 'Disabled', bg: '#F5F5F5', textColor: '#A1A1AB', border: '2px solid #E1E7EE', iconColor: '#A1A1AB' },
       ],
     },
@@ -303,8 +303,8 @@ export const fchHansaRostockSystem: DesignSystem = {
       defaultContent: 'Select date...',
       variants: [
         { label: 'Default',  bg: '#FFFFFF', textColor: '#333333', border: '2px solid #E1E7EE' },
-        { label: 'Focused',  bg: '#FFFFFF', textColor: '#333333', border: '2px solid #0080C9' },
-        { label: 'Filled',   bg: '#E6F6FF', textColor: '#111111', border: '2px solid #0080C9', content: '12.06.2026' },
+        { label: 'Focused',  bg: '#FFFFFF', textColor: '#333333', border: '2px solid #E52721' },
+        { label: 'Filled',   bg: '#FDEAEA', textColor: '#111111', border: '2px solid #E52721', content: '12.06.2026' },
         { label: 'Disabled', bg: '#F5F5F5', textColor: '#A1A1AB', border: '2px solid #E1E7EE', labelColor: '#A1A1AB', iconColor: '#A1A1AB' },
         { label: 'Error',    bg: '#FFFFFF', textColor: '#333333', border: '2px solid #E02020' },
       ],
@@ -321,8 +321,8 @@ export const fchHansaRostockSystem: DesignSystem = {
       defaultContent: 'Enter text...',
       variants: [
         { label: 'Default',  bg: '#FFFFFF', textColor: '#333333', border: '2px solid #E1E7EE' },
-        { label: 'Focused',  bg: '#FFFFFF', textColor: '#333333', border: '2px solid #0080C9' },
-        { label: 'Filled',   bg: '#E6F6FF', textColor: '#111111', border: '2px solid #0080C9', content: 'Text value' },
+        { label: 'Focused',  bg: '#FFFFFF', textColor: '#333333', border: '2px solid #E52721' },
+        { label: 'Filled',   bg: '#FDEAEA', textColor: '#111111', border: '2px solid #E52721', content: 'Text value' },
         { label: 'Disabled', bg: '#F5F5F5', textColor: '#A1A1AB', border: '2px solid #E1E7EE', labelColor: '#A1A1AB' },
         { label: 'Error',    bg: '#FFFFFF', textColor: '#333333', border: '2px solid #E02020' },
       ],
@@ -331,7 +331,7 @@ export const fchHansaRostockSystem: DesignSystem = {
 
   principles: {
     do: [
-      'Use FCH-Blau (#0080C9) for headings, header backgrounds, and primary CTAs',
+      'Use FCH-Rot (#E52721) for headings, header backgrounds, and primary CTAs',
       'Set Factoria-Bold in UPPERCASE for all display elements and CTAs',
       'Maintain sharp shapes — radius-none dominates the entire UI',
       'Combine blue and navy for depth in headers and hero sections',
