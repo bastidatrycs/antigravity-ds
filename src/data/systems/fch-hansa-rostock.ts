@@ -84,12 +84,12 @@ export const fchHansaRostockSystem: DesignSystem = {
   ],
 
   typography: [
-    { token: 'display', family: 'Factoria-Bold', size: 87, weight: 700, lineHeight: 87, tracking: 0, usage: 'Hero score · oversized numbers · display-1', section: 'display', textTransform: 'uppercase' },
-    { token: 'h1',      family: 'Factoria-Bold', size: 60, weight: 700, lineHeight: 72, tracking: 0, usage: 'Main heading',    section: 'display', textTransform: 'uppercase' },
-    { token: 'h2',      family: 'Factoria-Bold', size: 50, weight: 700, lineHeight: 60, tracking: 0, usage: 'Section heading', section: 'display', textTransform: 'uppercase' },
-    { token: 'h3',      family: 'Factoria-Bold', size: 38, weight: 700, lineHeight: 46, tracking: 0, usage: 'Sub-section',     section: 'display', textTransform: 'uppercase' },
-    { token: 'h4',      family: 'Factoria-Bold', size: 30, weight: 700, lineHeight: 36, tracking: 0, usage: 'Card title',      section: 'display', textTransform: 'uppercase' },
-    { token: 'h5',      family: 'Factoria-Bold', size: 26, weight: 700, lineHeight: 32, tracking: 0, usage: 'Card subtitle',   section: 'display', textTransform: 'uppercase' },
+    { token: 'display', family: 'Factoria-Bold', size: 87, weight: 700, lineHeight: 87, tracking: 0, usage: 'Hero score · oversized numbers · display-1', section: 'display' },
+    { token: 'h1',      family: 'Factoria-Bold', size: 60, weight: 700, lineHeight: 72, tracking: 0, usage: 'Main heading',    section: 'display' },
+    { token: 'h2',      family: 'Factoria-Bold', size: 50, weight: 700, lineHeight: 60, tracking: 0, usage: 'Section heading', section: 'display' },
+    { token: 'h3',      family: 'Factoria-Bold', size: 38, weight: 700, lineHeight: 46, tracking: 0, usage: 'Sub-section',     section: 'display' },
+    { token: 'h4',      family: 'Factoria-Bold', size: 30, weight: 700, lineHeight: 36, tracking: 0, usage: 'Card title',      section: 'display' },
+    { token: 'h5',      family: 'Factoria-Bold', size: 26, weight: 700, lineHeight: 32, tracking: 0, usage: 'Card subtitle',   section: 'display' },
     { token: 'h6',      family: 'Factoria-Bold', size: 20, weight: 700, lineHeight: 28, tracking: 0, usage: 'Small section heading', section: 'display' },
     { token: 'body-lg', family: 'noway-regular-webfont', size: 20, weight: 400, lineHeight: 28, tracking: 0, usage: 'Nav links · button labels', section: 'body' },
     { token: 'body-md', family: 'noway-regular-webfont', size: 16, weight: 400, lineHeight: 24, tracking: 0, usage: 'Default body copy',         section: 'body' },
