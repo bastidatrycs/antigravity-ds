@@ -116,7 +116,7 @@ export function Typography({ system }: { system: DesignSystem }) {
                       letterSpacing: t.tracking ? `${t.tracking}px` : undefined,
                       lineHeight: `${t.lineHeight}px`,
                       color: isDisplay && headingColor ? headingColor : '#111111',
-                      textTransform: 'none',
+                      textTransform: t.textTransform ?? 'none',
                     }}
                   >
                     {DEMO_TEXTS[t.token] ?? t.usage}

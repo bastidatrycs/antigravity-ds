@@ -15,6 +15,7 @@ export interface TypographyToken {
   tracking: number
   usage: string
   section: 'display' | 'body'
+  textTransform?: 'none' | 'uppercase' | 'capitalize' | 'lowercase'
 }
 
 export interface SpacingToken {
